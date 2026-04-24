@@ -51,6 +51,18 @@
   .surface {
     @apply rounded-lg border border-white/10 bg-white/[0.045] shadow-[0_24px_80px_-48px_rgba(0,0,0,0.8)];
   }
+
+  .surface-featured {
+    @apply rounded-2xl border border-gold-400/50 bg-gold-400/[0.07]
+           shadow-[0_0_100px_-28px_rgba(201,151,43,0.55),inset_0_1px_0_rgba(201,151,43,0.2)];
+  }
+
+  /* Subtle noise texture overlay — add to section wrappers */
+  .section-band-accent {
+    @apply relative overflow-hidden py-20 md:py-28;
+    background-image:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,151,43,0.07) 0%, transparent 70%);
+  }
 }
 
 .aurora-container {

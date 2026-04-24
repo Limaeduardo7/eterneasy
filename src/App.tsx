@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
+import { ClientPitch } from "@/components/sections/ClientPitch";
 import { Problem } from "@/components/sections/Problem";
 import { Mechanism } from "@/components/sections/Mechanism";
 import { Offer } from "@/components/sections/Offer";
@@ -19,6 +20,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <ClientPitch />
         <Problem />
         <Mechanism />
         <Offer />

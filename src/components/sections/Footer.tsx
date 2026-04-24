@@ -8,7 +8,7 @@ export function Footer() {
           </a>
 
           <p className="max-w-sm text-sm leading-6 text-slate-blue-100/58">
-            Você já vende eventos. A Eterneasy ajuda a capturar mais margem com estrutura.
+            Sistema para parceiros venderem envio de fotos ao vivo, slideshow no monitor e vídeo final pós-evento.
           </p>
 
           <nav className="flex items-center gap-5 text-sm font-semibold text-slate-blue-100/58">

@@ -3,9 +3,9 @@ import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const CARDS = [
-  { icon: BadgePercent, title: "Custo acompanha a venda", desc: "No Flex, o parceiro não assume mensalidade antes de ter receita associada." },
-  { icon: BarChart3, title: "Volume melhora previsibilidade", desc: "Quando a recorrência aumenta, o Premium reduz atrito e melhora a margem por evento." },
-  { icon: ShieldCheck, title: "Menos perda operacional", desc: "Processo padronizado reduz erro, retrabalho, desalinhamento e promessa comercial mal executada." },
+  { icon: BadgePercent, title: "Flex — sem mensalidade",     desc: "Você paga R$150 por cliente. Sem custo fixo até validar o volume." },
+  { icon: BarChart3,    title: "Premium — margem em volume", desc: "Com recorrência, R$500/mês elimina cobrança por cliente e torna o custo previsível." },
+  { icon: ShieldCheck,  title: "Fácil de demonstrar",        desc: "Mostre o envio de fotos, o slideshow e o vídeo. O cliente entende na hora." },
 ];
 
 export function PartnerEconomics() {
@@ -19,7 +19,7 @@ export function PartnerEconomics() {
         <div className="mb-12 max-w-3xl">
           <span className="eyebrow">Modelo de ganho</span>
           <BlurText
-            text="A parceria precisa fechar na conta, não só no discurso."
+            text="Visual, simples de vender e fácil de demonstrar."
             animateBy="words"
             direction="bottom"
             delay={60}
@@ -44,12 +44,12 @@ export function PartnerEconomics() {
           <div className="surface p-6">
             <span className="text-sm font-bold text-gold-200">Leitura simples</span>
             <p className="mt-4 font-display text-3xl font-semibold leading-tight text-parchment-50">
-              Venda primeiro. Estruture sem inflar custo fixo.
+              Flex para validar. Premium para escalar.
             </p>
           </div>
           <div className="surface flex flex-col justify-between gap-6 p-6 md:flex-row md:items-center">
             <p className="max-w-xl text-base leading-8 text-slate-blue-100/72">
-              O objetivo não é trocar sua operação por outra. É dar uma camada de processo para que cada evento vendido tenha caminho, responsável e margem acompanhada.
+              Seu cliente paga pela experiência. O plano define se seu custo acompanha cada venda ou vira mensalidade fixa.
             </p>
             <a href="#cta-final" className="inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/30 px-5 py-3 text-sm font-extrabold text-gold-100 transition-colors hover:bg-gold-400/10">
               Ver na prática

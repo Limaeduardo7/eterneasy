@@ -3,6 +3,7 @@ import { ArrowRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
+  { label: "O que é", href: "#o-que-e" },
   { label: "Problema", href: "#problema" },
   { label: "Como funciona", href: "#mecanismo" },
   { label: "Planos", href: "#oferta" },

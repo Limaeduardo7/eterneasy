@@ -3,15 +3,15 @@ import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const IDEAL = [
-  { icon: CalendarCheck, title: "Vende eventos com alguma frequência", desc: "Mesmo que ainda não tenha volume alto, já existe demanda recorrente ou oportunidade clara de venda." },
-  { icon: Users, title: "Quer manter o relacionamento comercial", desc: "O parceiro continua sendo o ponto de confiança do cliente e não perde protagonismo na negociação." },
-  { icon: HandCoins, title: "Busca margem sem aumentar equipe", desc: "A estrutura entra para reduzir atrito operacional antes que a venda vire custo escondido." },
+  { icon: CalendarCheck, title: "Já vende eventos",        desc: "Mesmo sem alto volume, você tem demanda recorrente ou oportunidade clara de venda." },
+  { icon: Users,         title: "Mantém o relacionamento", desc: "Você continua sendo o ponto de confiança do cliente — a Eterneasy entra na entrega." },
+  { icon: HandCoins,     title: "Quer mais margem",        desc: "Sem aumentar equipe. A estrutura reduz atrito antes que a venda vire custo." },
 ];
 
 const NOT_IDEAL = [
-  "Quem ainda não vende eventos ou não quer abrir uma frente comercial.",
-  "Quem prefere operar tudo manualmente sem padronização.",
-  "Quem não quer registrar informações mínimas para viabilizar a entrega.",
+  "Não quer abrir uma frente de vendas em eventos.",
+  "Prefere operar tudo manualmente.",
+  "Não quer registrar informações básicas do evento.",
 ];
 
 export function PartnerFit() {
@@ -24,16 +24,16 @@ export function PartnerFit() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <span className="eyebrow">Perfil do parceiro</span>
+            <span className="eyebrow">Para quem é</span>
             <BlurText
-              text="Para quem essa parceria faz sentido."
+              text="Você já atende eventos. Só faltava estrutura para monetizar isso."
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-7 text-lg leading-8 text-slate-blue-100/72">
-              A Eterneasy funciona melhor quando o parceiro já tem acesso ao cliente, mas não quer carregar sozinho toda a complexidade da operação.
+            <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
+              Festas, casamentos, formaturas, eventos corporativos, buffets, fotógrafos, cerimonialistas.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export function PartnerFit() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="font-display text-lg font-semibold leading-7 text-parchment-50">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-blue-100/64">{item.desc}</p>
+                    <p className="mt-2 text-sm leading-6 text-slate-blue-100/64">{item.desc}</p>
                   </div>
                 );
               })}
@@ -56,13 +56,11 @@ export function PartnerFit() {
             <div className="mt-4 rounded-lg border border-ember-400/20 bg-ember-400/[0.055] p-6">
               <div className="mb-4 flex items-center gap-3 text-sm font-extrabold uppercase text-ember-400">
                 <CircleAlert className="h-4 w-4" />
-                Não é para qualquer caso
+                Não é para você se
               </div>
               <div className="grid gap-3 md:grid-cols-3">
                 {NOT_IDEAL.map((item) => (
-                  <p key={item} className="text-sm leading-6 text-parchment-100/72">
-                    {item}
-                  </p>
+                  <p key={item} className="text-sm leading-6 text-parchment-100/72">{item}</p>
                 ))}
               </div>
             </div>
@@ -70,7 +68,7 @@ export function PartnerFit() {
             <div className="mt-4 flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] p-5">
               <Building2 className="h-5 w-5 shrink-0 text-gold-300" />
               <p className="text-sm leading-6 text-slate-blue-100/72">
-                A demonstração serve para entender seu cenário atual e indicar se o modelo Flex ou Premium faz mais sentido.
+                A demonstração mostra tudo: envio de fotos, slideshow no monitor e vídeo final entregue ao cliente.
               </p>
             </div>
           </div>

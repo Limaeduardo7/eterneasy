@@ -1,12 +1,12 @@
-import { AlertTriangle, CircleDollarSign, ClipboardList, TrendingDown } from "lucide-react";
+import { AlertTriangle, Camera, MonitorX, VideoOff } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const ITEMS = [
-  { icon: ClipboardList, title: "Vendas sem padrão", desc: "Cada evento nasce com um fluxo diferente e a operação passa a depender de memória, mensagens e improviso." },
-  { icon: AlertTriangle, title: "Processos manuais", desc: "Planilhas, repasses soltos e tarefas sem dono criam retrabalho invisível antes da entrega." },
-  { icon: TrendingDown, title: "Baixa previsibilidade", desc: "Sem uma esteira clara, fica difícil antecipar gargalos, margem real e capacidade de atendimento." },
-  { icon: CircleDollarSign, title: "Margem escapando", desc: "O dinheiro se perde em pequenas falhas de processo que parecem rotina, mas corroem o resultado." },
+  { icon: Camera,        title: "Fotos ficam perdidas",        desc: "Convidados registram tudo pelo celular, mas o material fica espalhado em grupos e galerias pessoais." },
+  { icon: MonitorX,      title: "Sem interação visual",        desc: "As fotos não chegam ao telão. O evento perde uma atração simples de implementar." },
+  { icon: VideoOff,      title: "Pós-evento sem entrega",      desc: "Quando acaba a festa, o cliente não recebe nada. A experiência some junto com o evento." },
+  { icon: AlertTriangle, title: "Difícil de vender sem mostrar", desc: "Sem uma demonstração clara, fica difícil explicar o valor e fechar a venda." },
 ];
 
 export function Problem() {
@@ -19,16 +19,16 @@ export function Problem() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16 md:items-start">
           <div className="md:col-span-5">
-            <span className="eyebrow">Diagnóstico</span>
+            <span className="eyebrow">Problema</span>
             <BlurText
-              text="O problema não está na venda. Está na estrutura."
+              text="Todo mundo tira foto. Poucos eventos fazem algo com isso."
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-7 max-w-md text-lg leading-8 text-slate-blue-100/78">
-              Você já gera demanda. O próximo salto vem de transformar cada venda em uma operação previsível.
+            <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
+              A oportunidade está em pegar essas fotos e transformar em participação ao vivo e lembrança entregue depois.
             </p>
           </div>
 
@@ -36,12 +36,12 @@ export function Problem() {
             {ITEMS.map((item) => {
               const Icon = item.icon;
               return (
-                <li key={item.title} className="surface group p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/30 hover:bg-white/[0.065]">
-                  <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 text-gold-200">
+                <li key={item.title} className="surface group p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/30">
+                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 text-gold-200">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-parchment-50">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-slate-blue-100/66">{item.desc}</p>
+                  <p className="mt-2.5 text-sm leading-7 text-slate-blue-100/66">{item.desc}</p>
                 </li>
               );
             })}
