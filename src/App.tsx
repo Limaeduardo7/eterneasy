@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ClientPitch } from "@/components/sections/ClientPitch";
 import { Problem } from "@/components/sections/Problem";
 import { Mechanism } from "@/components/sections/Mechanism";
+import { Keepsakes } from "@/components/sections/Keepsakes";
 import { Offer } from "@/components/sections/Offer";
 import { PartnerFit } from "@/components/sections/PartnerFit";
 import { PartnerEconomics } from "@/components/sections/PartnerEconomics";
@@ -23,6 +24,7 @@ export default function App() {
         <ClientPitch />
         <Problem />
         <Mechanism />
+        <Keepsakes />
         <Offer />
         <PartnerFit />
         <PartnerEconomics />

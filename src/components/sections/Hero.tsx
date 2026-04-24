@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ArrowRight, Camera, MonitorPlay, Video } from "lucide-react";
+import { ArrowRight, Gift, MonitorPlay, QrCode } from "lucide-react";
 import { Aurora } from "@/components/bits/Aurora";
 
 const PILLARS = [
-  { Icon: Camera,      label: "Fotos ao vivo", sub: "Convidados enviam pelo celular" },
-  { Icon: MonitorPlay, label: "Slideshow",      sub: "Aparece no monitor em tempo real" },
-  { Icon: Video,       label: "Vídeo final",    sub: "Entregue ao cliente depois" },
+  { Icon: QrCode,      label: "QR Code instantâneo",  sub: "Convidados escaneiam e enviam foto + mensagem" },
+  { Icon: MonitorPlay, label: "Aparece no telão",      sub: "Slideshow ao vivo na TV, telão ou projetor" },
+  { Icon: Gift,        label: "Lembrança garantida",   sub: "Vídeo + produtos exclusivos entregues ao cliente" },
 ];
 
 export function Hero() {
@@ -46,7 +46,7 @@ export function Hero() {
         <Aurora colorStops={["#061018", "#C9972B", "#163644"]} amplitude={0.9} blend={0.38} speed={0.28} />
       </div>
 
-      {/* Gold top-center radial glow */}
+      {/* Gold radial glow */}
       <div className="absolute inset-0 z-[2] pointer-events-none bg-[radial-gradient(ellipse_70%_40%_at_65%_30%,rgba(201,151,43,0.10)_0%,transparent_70%)]" />
 
       <div ref={ref} className="container-x relative z-10 pb-14 pt-28 md:pt-36">
@@ -63,15 +63,15 @@ export function Hero() {
           {/* Left — copy */}
           <div>
             <h1 data-h className="font-display font-bold leading-[1.06] tracking-tight text-parchment-50 text-[2.75rem] md:text-5xl lg:text-[3.75rem]">
-              Fotos ao vivo{" "}
-              <span className="text-gold-300">no evento.</span>
+              Fotos e mensagens{" "}
+              <span className="text-gold-300">no telão.</span>
               <br className="hidden md:block" />
-              {" "}Vídeo entregue{" "}
+              {" "}Lembrança entregue{" "}
               <span className="text-gold-300">depois.</span>
             </h1>
 
             <p data-h className="mt-6 max-w-md text-base leading-7 text-slate-blue-100/72 md:text-lg md:leading-8">
-              Você vende a experiência. A Eterneasy cuida do envio, do slideshow e do vídeo final.
+              Convidados escaneiam o QR Code, enviam foto e mensagem — aparece no telão na hora. Depois, vira vídeo e lembranças exclusivas para o cliente.
             </p>
 
             <div data-h className="mt-9 flex flex-wrap gap-3">

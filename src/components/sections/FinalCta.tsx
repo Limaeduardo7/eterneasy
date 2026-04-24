@@ -31,13 +31,15 @@ export function FinalCta() {
           </div>
 
           <h2 data-reveal className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-parchment-50 md:text-6xl lg:text-7xl">
-            Veja como funciona
+            Veja o QR Code,{" "}
+            <span className="text-gold-300">o telão</span>
             <br />
-            <span className="text-gold-300">antes de vender.</span>
+            e o vídeo final{" "}
+            <span className="text-gold-300">ao vivo.</span>
           </h2>
 
           <p data-reveal className="mt-7 text-base leading-8 text-slate-blue-100/70 md:text-lg md:leading-9">
-            A demo mostra o fluxo completo: convidados enviam fotos, aparecem no slideshow e o cliente recebe o vídeo final.
+            A demo mostra o fluxo completo: convidados escaneiam, enviam foto e mensagem, aparece no telão em segundos e vira vídeo depois.
           </p>
 
           <div data-reveal className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
