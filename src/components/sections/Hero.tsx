@@ -27,9 +27,9 @@ export function Hero() {
     <section className="relative flex min-h-[94svh] items-center overflow-hidden bg-navy-950">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=80"
+          src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2400&q=85"
           alt=""
-          className="h-full w-full object-cover opacity-35 mix-blend-luminosity"
+          className="h-full w-full object-cover object-center opacity-42 mix-blend-luminosity"
         />
       </div>
       <div className="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(6,16,24,0.96)_0%,rgba(6,16,24,0.72)_48%,rgba(6,16,24,0.3)_100%)]" />
