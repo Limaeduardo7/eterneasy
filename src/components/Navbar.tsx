@@ -39,8 +39,8 @@ export function Navbar() {
         )}
       >
         <div className="container-x flex h-16 items-center justify-between md:h-20">
-          <a href="#" onClick={close} className="shrink-0">
-            <img src="/logo.png" alt="Eterneasy" className="h-8 w-auto object-contain md:h-9" />
+          <a href="/" onClick={close} className="shrink-0" aria-label="Eterneasy">
+            <img src="/logo.webp" alt="Eterneasy" width={180} height={48} className="h-8 w-auto object-contain md:h-9" decoding="async" />
           </a>
 
           <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 md:flex">
@@ -80,7 +80,7 @@ export function Navbar() {
         )}
       >
         <div className="container-x flex h-full flex-col justify-center gap-2 pt-20 pb-12">
-          <img src="/logo.png" alt="Eterneasy" className="mb-8 h-10 w-auto object-contain" />
+          <img src="/logo.webp" alt="Eterneasy" width={180} height={48} className="mb-8 h-10 w-auto object-contain" decoding="async" />
 
           {NAV.map((item, i) => (
             <a

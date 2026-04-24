@@ -26,7 +26,7 @@ const PLANS = [
     price: "R$ 500",
     period: "/mês",
     tag: "Clientes ilimitados",
-    micro: "Para parceiros com volume recorrente",
+    micro: "Para quem tem volume recorrente",
     featured: true,
     bullets: [
       "Clientes ilimitados inclusos",

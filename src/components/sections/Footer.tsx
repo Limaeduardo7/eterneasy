@@ -3,18 +3,18 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-navy-950 py-10">
       <div className="container-x">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <a href="#">
-            <img src="/logo.png" alt="Eterneasy" className="h-8 w-auto object-contain" />
+          <a href="/" aria-label="Eterneasy">
+            <img src="/logo.webp" alt="Eterneasy" width={180} height={48} className="h-8 w-auto object-contain" loading="lazy" decoding="async" />
           </a>
 
           <p className="max-w-sm text-sm leading-6 text-slate-blue-100/58">
-            Sistema para parceiros venderem envio de fotos ao vivo, slideshow no monitor e vídeo final pós-evento.
+            Venda envio de fotos ao vivo, slideshow no telão e vídeo final pós-evento para os clientes que você já atende.
           </p>
 
           <nav className="flex items-center gap-5 text-sm font-semibold text-slate-blue-100/58">
-            <a href="#" className="transition-colors hover:text-gold-200">Termos</a>
-            <a href="#" className="transition-colors hover:text-gold-200">Privacidade</a>
-            <a href="#" className="transition-colors hover:text-gold-200">Contato</a>
+            <a href="#oferta" className="transition-colors hover:text-gold-200">Planos</a>
+            <a href="#objecoes" className="transition-colors hover:text-gold-200">Dúvidas</a>
+            <a href="#cta-final" className="transition-colors hover:text-gold-200">Contato</a>
           </nav>
         </div>
 

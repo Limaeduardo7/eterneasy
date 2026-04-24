@@ -30,8 +30,13 @@ export function Hero() {
     <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-navy-950">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2400&q=80"
-          alt=""
+          src="/hero-event.webp"
+          alt="Evento com convidados participando em celebração"
+          width={1800}
+          height={1200}
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="h-full w-full object-cover object-center opacity-25 mix-blend-luminosity"
         />
       </div>

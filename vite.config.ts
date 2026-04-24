@@ -4,6 +4,19 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    target: "es2020",
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ["react", "react-dom"],
+          animation: ["gsap", "motion", "ogl"],
+          icons: ["lucide-react"],
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

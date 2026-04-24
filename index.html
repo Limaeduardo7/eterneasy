@@ -2,39 +2,67 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary SEO -->
-    <title>Eterneasy — Nova receita para quem já faz eventos</title>
-    <meta name="description" content="Adicione participação ao vivo e lembranças exclusivas a cada evento que você já atende. QR Code, fotos e mensagens no telão, vídeo final entregue ao cliente. Sem equipe extra." />
-    <meta name="robots" content="index, follow" />
+    <title>Eterneasy — Venda fotos ao vivo e vídeo final em eventos</title>
+    <meta name="description" content="Para você que atua com eventos: ofereça QR Code para convidados enviarem fotos e mensagens, exiba tudo no telão em tempo real e entregue um vídeo final ao cliente." />
+    <link rel="canonical" href="https://eterneasy.netlify.app/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#061018" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Eterneasy" />
-    <meta property="og:url" content="https://eterneasy.netlify.app" />
-    <meta property="og:title" content="Eterneasy — Seu concorrente ainda não oferece isso" />
-    <meta property="og:description" content="Convidados escaneiam o QR Code, enviam foto e mensagem — aparece no telão na hora. Depois vira vídeo e lembranças exclusivas. Zero operação manual. Comece sem mensalidade." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&h=630&q=80" />
+    <meta property="og:url" content="https://eterneasy.netlify.app/" />
+    <meta property="og:title" content="Eterneasy — Uma nova oferta para você vender em eventos" />
+    <meta property="og:description" content="Adicione fotos ao vivo no telão e vídeo final aos eventos que você já atende. Uma experiência simples de vender, sem equipe extra e com planos para começar sem mensalidade." />
+    <meta property="og:image" content="https://eterneasy.netlify.app/og-image.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/webp" />
     <meta property="og:locale" content="pt_BR" />
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Eterneasy — Seu concorrente ainda não oferece isso" />
-    <meta name="twitter:description" content="Adicione participação ao vivo e lembranças exclusivas a cada evento que você já atende. QR Code, telão em tempo real, vídeo final entregue." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&h=630&q=80" />
+    <meta name="twitter:title" content="Eterneasy — Venda fotos ao vivo e vídeo final em eventos" />
+    <meta name="twitter:description" content="Ofereça QR Code, fotos e mensagens no telão em tempo real e vídeo final entregue ao cliente. Ideal para quem já atua com eventos." />
+    <meta name="twitter:image" content="https://eterneasy.netlify.app/og-image.webp" />
 
-    <!-- Fonts -->
+    <link rel="preload" as="image" href="/hero-event.webp" type="image/webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Eterneasy",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://eterneasy.netlify.app/",
+        "description": "Sistema para vender fotos ao vivo em eventos: convidados enviam fotos e mensagens pelo celular, o conteúdo aparece no telão e o cliente recebe um vídeo final.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Flex",
+            "price": "150",
+            "priceCurrency": "BRL",
+            "description": "Sem mensalidade, R$150 por cliente."
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium",
+            "price": "500",
+            "priceCurrency": "BRL",
+            "description": "R$500 por mês, clientes ilimitados."
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

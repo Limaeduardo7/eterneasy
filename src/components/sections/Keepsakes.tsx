@@ -86,7 +86,7 @@ export function Keepsakes() {
         </div>
 
         <p className="mt-8 text-sm leading-7 text-slate-blue-100/48">
-          Os produtos físicos são opcionais e podem ser oferecidos como upgrade pelo parceiro — cada um é uma nova fonte de receita.
+          Os produtos físicos são opcionais e podem ser oferecidos como upgrade por você. Cada um vira uma nova fonte de receita.
         </p>
       </div>
     </section>
