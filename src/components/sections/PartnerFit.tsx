@@ -24,16 +24,16 @@ export function PartnerFit() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <span className="eyebrow">Para quem é</span>
+            <span className="eyebrow">Você se encaixa aqui?</span>
             <BlurText
-              text="Você já atende eventos. Só faltava estrutura para monetizar isso."
+              text="Se você já entra em eventos, já tem tudo que precisa."
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
             <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
-              Festas, casamentos, formaturas, eventos corporativos, buffets, fotógrafos, cerimonialistas.
+              Fotógrafos, cerimonialistas, buffets, produtores de eventos, decoradores — qualquer profissional que já tem acesso ao evento pode vender isso.
             </p>
           </div>
 

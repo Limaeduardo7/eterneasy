@@ -6,27 +6,27 @@ const FLOW = [
   {
     icon: QrCode,
     title: "Você cria o evento com QR Code",
-    desc: "Gera o QR Code exclusivo do evento. O convidado escaneia e já pode participar — sem app, sem cadastro.",
+    desc: "Em minutos você configura o evento e gera o QR Code exclusivo. O convidado escaneia — sem app, sem cadastro, sem fricção.",
   },
   {
     icon: MessageSquareHeart,
     title: "Convidados enviam foto + mensagem",
-    desc: "Pelo celular, cada convidado envia uma foto e escreve uma mensagem especial para o aniversariante, noivos ou homenageado.",
+    desc: "Cada pessoa envia uma foto e escreve uma mensagem para o homenageado direto pelo celular. É simples o suficiente para qualquer convidado usar.",
   },
   {
     icon: MonitorPlay,
-    title: "Aparece no telão em tempo real",
-    desc: "Foto e mensagem entram direto no slideshow exibido na TV, telão ou projetor — todo mundo vê na hora.",
+    title: "Tudo aparece no telão em tempo real",
+    desc: "Foto e mensagem entram no slideshow e aparecem na TV, telão ou projetor em segundos. O evento inteiro vê — e todos querem participar.",
   },
   {
     icon: Video,
-    title: "Tudo vira um vídeo emocionante",
-    desc: "Depois do evento, transformamos todas as fotos e mensagens em um vídeo personalizado para o cliente guardar.",
+    title: "As memórias viram um vídeo emocionante",
+    desc: "Depois do evento, transformamos tudo em um vídeo personalizado. O cliente recebe algo que vai guardar — e que nenhum concorrente seu entregava até hoje.",
   },
   {
     icon: Gift,
-    title: "Você entrega a lembrança completa",
-    desc: "Além do vídeo, o cliente pode receber álbum físico, quadros personalizados ou porta retrato digital.",
+    title: "Você entrega e fecha com chave de ouro",
+    desc: "Além do vídeo, você pode oferecer álbum físico, quadros e porta retrato digital. Cada produto adicional é mais margem no mesmo evento.",
   },
 ];
 
@@ -40,16 +40,16 @@ export function ClientPitch() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <span className="eyebrow">O que é</span>
+            <span className="eyebrow">A experiência que você passa a vender</span>
             <BlurText
-              text="Participação ao vivo. Lembrança entregue depois."
+              text="Participação ao vivo. Lembrança que o cliente guarda para sempre."
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
             <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
-              Você não vende "um sistema". Vende a experiência de ver fotos e mensagens dos convidados no telão — e uma lembrança em vídeo que o cliente guarda para sempre.
+              Não é "mais um sistema". É um serviço que o cliente vai pagar, indicar e lembrar — porque ele nunca teve isso em um evento antes.
             </p>
           </div>
 

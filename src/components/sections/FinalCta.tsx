@@ -9,37 +9,28 @@ export function FinalCta() {
     <section id="cta-final" className="relative overflow-hidden bg-navy-950 py-24 md:py-40">
       <div className="section-divider absolute left-0 top-0" />
 
-      {/* Aurora background */}
       <div className="absolute inset-0 z-0 opacity-55">
         <Aurora colorStops={["#061018", "#C9972B", "#163644"]} amplitude={0.7} blend={0.44} speed={0.30} />
       </div>
-
-      {/* Overlay */}
       <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(6,16,24,0.82),rgba(6,16,24,0.60))]" />
-
-      {/* Center gold radial */}
       <div className="absolute inset-0 z-[2] pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_50%,rgba(201,151,43,0.12)_0%,transparent_70%)]" />
 
       <div className="container-x relative z-10">
         <div ref={ref} className="mx-auto max-w-3xl text-center">
 
-          {/* Gold decorative line */}
           <div data-reveal className="mx-auto mb-8 flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-400/50" />
-            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">Demonstração</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">Demonstração gratuita</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-400/50" />
           </div>
 
           <h2 data-reveal className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-parchment-50 md:text-6xl lg:text-7xl">
-            Veja o QR Code,{" "}
-            <span className="text-gold-300">o telão</span>
-            <br />
-            e o vídeo final{" "}
-            <span className="text-gold-300">ao vivo.</span>
+            Em 15 minutos você vê{" "}
+            <span className="text-gold-300">tudo funcionando.</span>
           </h2>
 
           <p data-reveal className="mt-7 text-base leading-8 text-slate-blue-100/70 md:text-lg md:leading-9">
-            A demo mostra o fluxo completo: convidados escaneiam, enviam foto e mensagem, aparece no telão em segundos e vira vídeo depois.
+            Você escaneia o QR Code, envia uma foto com mensagem, vê aparecer no telão em segundos e recebe o vídeo depois. Aí você decide se vale.
           </p>
 
           <div data-reveal className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -47,7 +38,7 @@ export function FinalCta() {
               href="#"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full btn-gold px-10 py-5 text-base font-extrabold text-navy-950 shadow-[0_20px_60px_-18px_rgba(242,215,122,0.95)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-16px_rgba(242,215,122,1)] sm:w-auto"
             >
-              Solicitar demonstração
+              Quero ver a demonstração
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -62,7 +53,7 @@ export function FinalCta() {
           </div>
 
           <p data-reveal className="mt-8 text-xs font-semibold uppercase tracking-widest text-slate-blue-100/38">
-            Sem custo inicial · Ativação imediata · Sem mensalidade obrigatória
+            Sem custo · Sem compromisso · Você vê antes de decidir
           </p>
         </div>
       </div>

@@ -18,9 +18,9 @@ export function Role() {
 
       <div className="container-x">
         <div className="mb-12 max-w-2xl">
-          <span className="eyebrow">Papéis</span>
+          <span className="eyebrow">Quem faz o quê — e quem lucra</span>
           <BlurText
-            text="Cada um faz o que é seu. Nada se mistura."
+            text="Você vende. A Eterneasy opera. O cliente fica encantado."
             animateBy="words"
             direction="bottom"
             delay={60}
@@ -35,7 +35,7 @@ export function Role() {
         </div>
 
         <p className="mt-10 text-base leading-8 text-slate-blue-100/62">
-          Você foca em vender. A Eterneasy cuida do envio, do slideshow e do vídeo.
+          Você fecha o contrato e orienta no dia. Tudo que envolve tecnologia, operação e entrega é com a Eterneasy.
         </p>
       </div>
     </section>

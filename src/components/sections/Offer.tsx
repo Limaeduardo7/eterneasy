@@ -50,9 +50,9 @@ export function Offer() {
       <div className="container-x">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <span className="eyebrow">Planos</span>
+            <span className="eyebrow">Planos — comece agora, escale no seu ritmo</span>
             <BlurText
-              text="Comece sem mensalidade. Escale com custo previsível."
+              text="Zero risco para validar. Custo previsível para escalar."
               animateBy="words"
               direction="bottom"
               delay={60}
@@ -60,7 +60,7 @@ export function Offer() {
             />
           </div>
           <p className="max-w-xs text-sm leading-7 text-slate-blue-100/60">
-            Pague por cliente vendido ou assuma mensalidade fixa para volume ilimitado.
+            Você escolhe: paga por cliente quando vender, ou trava um fixo baixo quando o volume justificar.
           </p>
         </div>
 

@@ -22,9 +22,9 @@ export function Implementation() {
       <div className="container-x">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <span className="eyebrow">Implantação</span>
+            <span className="eyebrow">Você testa antes de vender qualquer coisa</span>
             <BlurText
-              text="Veja funcionando antes de vender."
+              text="Veja o QR Code, o telão e o vídeo antes de oferecer ao cliente."
               animateBy="words"
               direction="bottom"
               delay={60}
@@ -32,7 +32,7 @@ export function Implementation() {
             />
           </div>
           <p className="max-w-sm text-sm leading-7 text-slate-blue-100/60">
-            Envio da foto, exibição no monitor, entrega em vídeo — o caminho completo em uma demonstração.
+            Você passa pelo fluxo completo como se fosse um convidado — e só depois decide se quer vender.
           </p>
         </div>
 

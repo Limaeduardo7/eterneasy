@@ -1,12 +1,28 @@
-import { AlertTriangle, Camera, MonitorX, VideoOff } from "lucide-react";
+import { AlertTriangle, DollarSign, TrendingDown, Users } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const ITEMS = [
-  { icon: Camera,        title: "Fotos ficam perdidas",        desc: "Convidados registram tudo pelo celular, mas o material fica espalhado em grupos e galerias pessoais." },
-  { icon: MonitorX,      title: "Sem interação visual",        desc: "As fotos não chegam ao telão. O evento perde uma atração simples de implementar." },
-  { icon: VideoOff,      title: "Pós-evento sem entrega",      desc: "Quando acaba a festa, o cliente não recebe nada. A experiência some junto com o evento." },
-  { icon: AlertTriangle, title: "Difícil de vender sem mostrar", desc: "Sem uma demonstração clara, fica difícil explicar o valor e fechar a venda." },
+  {
+    icon: TrendingDown,
+    title: "Sem diferencial, você compete no preço",
+    desc: "Se o que você oferece é igual ao concorrente, a única conversa é sobre desconto. Um serviço exclusivo muda essa dinâmica.",
+  },
+  {
+    icon: Users,
+    title: "O cliente quer mais — e ainda não sabe o que",
+    desc: "Eventos com participação ativa dos convidados geram mais engajamento e mais indicações. Mas poucos fornecedores entregam isso.",
+  },
+  {
+    icon: DollarSign,
+    title: "Receita parada nos eventos que você já faz",
+    desc: "Você já tem a relação com o cliente e o acesso ao evento. Faltava apenas um serviço para monetizar isso sem aumentar equipe.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Seu concorrente vai chegar lá antes",
+    desc: "Quem apresentar isso primeiro ao mercado local fica com a posição. A janela de vantagem existe agora — mas não vai durar para sempre.",
+  },
 ];
 
 export function Problem() {
@@ -19,16 +35,16 @@ export function Problem() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16 md:items-start">
           <div className="md:col-span-5">
-            <span className="eyebrow">Problema</span>
+            <span className="eyebrow">A oportunidade que seu concorrente ainda não viu</span>
             <BlurText
-              text="Todo mundo tira foto. Poucos eventos fazem algo com isso."
+              text="Você já está nos eventos. Só faltava o serviço certo."
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
             <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
-              A oportunidade está em pegar essas fotos e transformar em participação ao vivo e lembrança entregue depois.
+              Quem chegar primeiro com participação ao vivo e lembranças exclusivas vai dominar esse nicho localmente.
             </p>
           </div>
 
