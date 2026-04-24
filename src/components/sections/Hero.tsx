@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Aurora } from "@/components/bits/Aurora";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -75,7 +75,7 @@ export function Hero() {
             Sem mudança no seu processo comercial.
           </p>
 
-          <div ref={metaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <div ref={metaRef} className="flex">
             <a
               data-h
               href="#cta-final"
@@ -88,23 +88,6 @@ export function Hero() {
             >
               Solicitar demonstração
               <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              data-h
-              href="#cta-final"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/15 text-parchment-100 font-medium text-base hover:border-gold-400/40 hover:text-gold-300 transition-all duration-300"
-            >
-              Solicitar demonstração
-            </a>
-            <a
-              data-h
-              href="https://wa.me/5500000000000"
-              target="_blank"
-              rel="noreferrer"
-              className="sm:hidden inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-navy-900 font-semibold text-base"
-            >
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
             </a>
           </div>
 
