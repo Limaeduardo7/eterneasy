@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: dark; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-navy-900 text-parchment-100 font-sans;
+    font-feature-settings: "ss01", "cv02";
+  }
+
+  ::selection {
+    @apply bg-gold-400/30 text-parchment-50;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-block text-[10px] uppercase tracking-[0.25em] text-gold-400 font-semibold;
+  }
+
+  .headline-display {
+    @apply font-display text-balance leading-[1.03] tracking-tight text-parchment-50;
+  }
+
+  .section-divider {
+    @apply w-full h-px bg-gradient-to-r from-transparent via-gold-400/25 to-transparent;
+  }
+
+  /* Gold shimmer button */
+  .btn-gold {
+    background: linear-gradient(110deg, #C69A27 0%, #F0D98A 35%, #C69A27 65%, #A87E1A 100%);
+    background-size: 200% 100%;
+    animation: shine 4s linear infinite;
+  }
+
+  /* Glass card */
+  .glass-card {
+    @apply border border-white/10 bg-white/[0.03] backdrop-blur-md rounded-2xl;
+  }
+
+  /* Gold border left accent */
+  .accent-border {
+    border-left: 2px solid #C69A27;
+  }
+}
+
+/* Aurora container */
+.aurora-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.aurora-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
