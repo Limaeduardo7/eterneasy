@@ -75,24 +75,26 @@ export function Hero() {
             Sem mudança no seu processo comercial.
           </p>
 
-          <div
-            ref={metaRef}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
-          >
+          <div ref={metaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               data-h
               href="#cta-final"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full btn-gold text-navy-900 font-semibold text-base shadow-[0_10px_40px_-10px_rgba(198,154,39,0.5)] hover:shadow-[0_14px_50px_-8px_rgba(198,154,39,0.65)] hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-navy-900 font-semibold text-base shadow-[0_10px_40px_-10px_rgba(198,154,39,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_50px_-8px_rgba(198,154,39,0.65)]"
+              style={{
+                background:
+                  "linear-gradient(110deg, #C69A27 0%, #F0D98A 35%, #C69A27 65%, #A87E1A 100%)",
+                backgroundSize: "200% 100%",
+              }}
             >
-              Solicitar ativação
+              Solicitar demonstração
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
               data-h
-              href="#oferta"
+              href="#cta-final"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/15 text-parchment-100 font-medium text-base hover:border-gold-400/40 hover:text-gold-300 transition-all duration-300"
             >
-              Ver planos
+              Solicitar demonstração
             </a>
             <a
               data-h

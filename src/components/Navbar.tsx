@@ -64,7 +64,7 @@ export function Navbar() {
               href="#cta-final"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full btn-gold text-navy-900 text-sm font-semibold hover:opacity-90 transition-opacity"
             >
-              Solicitar ativação
+              Solicitar demonstração
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -114,7 +114,7 @@ export function Navbar() {
             onClick={close}
             className="mt-10 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full btn-gold text-navy-900 text-base font-semibold"
           >
-            Solicitar ativação
+            Solicitar demonstração
             <ArrowRight className="w-4 h-4" />
           </a>
 

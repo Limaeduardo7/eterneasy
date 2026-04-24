@@ -50,7 +50,7 @@ export function FinalCta() {
               href="#"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full btn-gold text-navy-900 font-bold text-base shadow-[0_14px_50px_-10px_rgba(198,154,39,0.6)] hover:shadow-[0_18px_60px_-8px_rgba(198,154,39,0.75)] hover:-translate-y-0.5 transition-all duration-300"
             >
-              Solicitar ativação agora
+              Solicitar demonstração
               <ArrowRight className="w-4 h-4" />
             </a>
             <a

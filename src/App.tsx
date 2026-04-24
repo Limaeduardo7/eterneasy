@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { Mechanism } from "@/components/sections/Mechanism";
@@ -21,6 +22,7 @@ export default function App() {
         <Role />
         <FinalCta />
       </main>
+      <FloatingWhatsApp />
       <Footer />
     </div>
   );
