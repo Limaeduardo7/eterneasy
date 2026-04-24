@@ -7,68 +7,50 @@ export function FinalCta() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-reveal]" });
 
   return (
-    <section id="cta-final" className="relative py-28 md:py-44 overflow-hidden bg-navy-950">
-      <div className="section-divider absolute top-0 left-0 w-full" />
-
-      <div className="absolute inset-0 z-0 opacity-60">
-        <Aurora
-          colorStops={["#0A1826", "#C69A27", "#102C47"]}
-          amplitude={0.9}
-          blend={0.5}
-          speed={0.4}
-        />
+    <section id="cta-final" className="relative overflow-hidden bg-navy-950 py-20 md:py-32">
+      <div className="section-divider absolute left-0 top-0" />
+      <div className="absolute inset-0 z-0 opacity-48">
+        <Aurora colorStops={["#061018", "#C9972B", "#163644"]} amplitude={0.65} blend={0.42} speed={0.32} />
       </div>
-
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-navy-950/80" />
+      <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(6,16,24,0.88),rgba(6,16,24,0.68))]" />
 
       <div className="container-x relative z-10">
-        <div ref={ref} className="max-w-3xl mx-auto text-center">
+        <div ref={ref} className="max-w-4xl">
           <span className="eyebrow" data-reveal>Decisão</span>
 
           <BlurText
-            text="Se você já vende eventos, continuar como está é perder margem."
+            text="Continuar sem estrutura é deixar margem na operação."
             animateBy="words"
             direction="bottom"
             delay={55}
-            className="headline-display mt-6 text-4xl md:text-6xl lg:text-[4.5rem]"
+            className="headline-display mt-6 text-4xl md:text-6xl lg:text-7xl"
           />
 
-          <p
-            data-reveal
-            className="mt-8 font-display italic text-xl md:text-2xl text-parchment-200/85 leading-snug"
-          >
-            A decisão não é entrar.
-            <br />
-            É quanto você está deixando na mesa.
+          <p data-reveal className="mt-7 max-w-2xl text-lg leading-8 text-slate-blue-100/78">
+            A demonstração mostra como sua venda atual pode entrar em um fluxo mais organizado, com menos perda e mais previsibilidade.
           </p>
 
-          <div
-            data-reveal
-            className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
+          <div data-reveal className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
               href="#"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full btn-gold text-navy-900 font-bold text-base shadow-[0_14px_50px_-10px_rgba(198,154,39,0.6)] hover:shadow-[0_18px_60px_-8px_rgba(198,154,39,0.75)] hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full btn-gold px-8 py-4 text-base font-extrabold text-navy-950 shadow-[0_18px_50px_-22px_rgba(242,215,122,0.9)] transition-all duration-300 hover:-translate-y-0.5"
             >
               Solicitar demonstração
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="https://wa.me/5500000000000"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] text-navy-900 font-semibold text-base hover:bg-[#20b859] hover:-translate-y-0.5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-4 text-base font-extrabold text-navy-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#20b859]"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="h-4 w-4" />
               Falar no WhatsApp
             </a>
           </div>
 
-          <p
-            data-reveal
-            className="mt-10 text-[10px] uppercase tracking-[0.22em] text-slate-blue-100/35"
-          >
-            Sem mudança no processo · Sem custo fixo obrigatório · Ativação imediata
+          <p data-reveal className="mt-8 text-sm font-semibold text-slate-blue-100/52">
+            Sem mudança no processo comercial. Sem custo fixo obrigatório. Ativação imediata.
           </p>
         </div>
       </div>

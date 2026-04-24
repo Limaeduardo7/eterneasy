@@ -2,51 +2,46 @@ import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const POINTS = [
-  { title: "Entrada sem barreira",               desc: "Começa no Flex, sem assumir custo fixo. Zero risco." },
-  { title: "Crescimento sem travas",             desc: "A estrutura acompanha seu volume sem refazer processo." },
-  { title: "Receita proporcional ao volume",     desc: "Quanto mais você vende, mais margem você captura." },
-  { title: "Estrutura elimina gargalos",         desc: "O que era manual vira automático. O que era perdido é recuperado." },
-  { title: "Migração natural conforme evolução", desc: "Troca de plano quando fizer sentido — sem atrito, sem custo de transição." },
+  { title: "Entrada sem barreira", desc: "Começa no Flex, sem assumir custo fixo antes de validar volume." },
+  { title: "Crescimento sem travas", desc: "A estrutura acompanha o aumento de vendas sem refazer seu processo comercial." },
+  { title: "Receita proporcional ao volume", desc: "Quanto mais você vende, mais margem consegue capturar na operação." },
+  { title: "Gargalos mais visíveis", desc: "O que era manual ganha padrão. O que era perdido passa a ser medido." },
+  { title: "Migração natural", desc: "Troca de plano quando fizer sentido, sem atrito e sem custo de transição." },
 ];
 
 export function Proof() {
   const ref = useRevealOnScroll<HTMLOListElement>({ selector: "li" });
 
   return (
-    <section className="relative py-24 md:py-36 bg-navy-800">
-      <div className="section-divider absolute top-0 left-0 w-full" />
-      <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full bg-gold-400/5 blur-[120px] pointer-events-none" />
+    <section className="section-band bg-navy-950">
+      <div className="section-divider absolute left-0 top-0" />
 
-      <div className="container-x relative">
-        <div className="grid md:grid-cols-12 gap-16 items-start">
-          <div className="md:col-span-5 md:sticky md:top-28">
+      <div className="container-x">
+        <div className="grid gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5 md:sticky md:top-28 md:self-start">
             <span className="eyebrow">Por que funciona</span>
             <BlurText
-              text="Por que esse modelo funciona"
+              text="Estrutura antes da escala."
               animateBy="words"
               direction="bottom"
               delay={70}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-8 font-display italic text-xl text-gold-300/90 leading-snug">
-              "Você não precisa escalar primeiro para estruturar.
-              <br />
-              Você estrutura para escalar."
+            <p className="mt-7 max-w-md text-lg leading-8 text-slate-blue-100/72">
+              O modelo reduz risco no início e cria base operacional para capturar mais margem quando o volume cresce.
             </p>
           </div>
 
-          <ol ref={ref} className="md:col-span-7 space-y-0">
-            {POINTS.map((p, i) => (
-              <li
-                key={p.title}
-                className={`py-8 ${i !== 0 ? "border-t border-white/8" : ""}`}
-              >
-                <h3 className="text-xl md:text-2xl font-semibold text-parchment-50 mb-2">
-                  {p.title}
-                </h3>
-                <p className="text-slate-blue-100/65 leading-relaxed">
-                  {p.desc}
-                </p>
+          <ol ref={ref} className="md:col-span-7">
+            {POINTS.map((point, index) => (
+              <li key={point.title} className="grid gap-5 border-t border-white/10 py-6 first:border-t-0 md:grid-cols-[72px_1fr] md:py-8">
+                <span className="font-display text-3xl font-bold text-gold-300/84">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-parchment-50">{point.title}</h3>
+                  <p className="mt-2 text-base leading-8 text-slate-blue-100/68">{point.desc}</p>
+                </div>
               </li>
             ))}
           </ol>

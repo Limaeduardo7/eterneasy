@@ -1,4 +1,4 @@
-import { Check, ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 import { cn } from "@/lib/utils";
@@ -6,12 +6,11 @@ import { cn } from "@/lib/utils";
 const PLANS = [
   {
     id: "flex",
-    badge: null,
     name: "Flex",
     price: "R$ 150",
     period: "por cliente",
     tag: "Sem mensalidade",
-    micro: "Ideal para começar sem risco",
+    micro: "Para começar com baixo compromisso",
     featured: false,
     bullets: [
       "Pague apenas pelo que vender",
@@ -22,12 +21,12 @@ const PLANS = [
   },
   {
     id: "premium",
-    badge: "Volume escalado",
+    badge: "Mais margem em volume",
     name: "Premium",
     price: "R$ 500",
     period: "/mês",
     tag: "Sem cobrança por cliente",
-    micro: "Ideal para quem já tem volume",
+    micro: "Para quem já vende com frequência",
     featured: true,
     bullets: [
       "Clientes ilimitados inclusos",
@@ -42,59 +41,54 @@ export function Offer() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
-    <section id="oferta" className="relative py-24 md:py-36 bg-navy-900">
-      <div className="section-divider absolute top-0 left-0 w-full" />
+    <section id="oferta" className="section-band bg-navy-900">
+      <div className="section-divider absolute left-0 top-0" />
 
       <div className="container-x">
-        <div className="max-w-2xl mb-14">
-          <span className="eyebrow">Oferta</span>
-          <BlurText
-            text="Dois modelos. Você escolhe como quer operar."
-            animateBy="words"
-            direction="bottom"
-            delay={60}
-            className="headline-display mt-5 text-3xl md:text-5xl"
-          />
+        <div className="mb-12 flex flex-col justify-between gap-6 md:mb-14 md:flex-row md:items-end">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Planos</span>
+            <BlurText
+              text="Dois modelos para operar com margem."
+              animateBy="words"
+              direction="bottom"
+              delay={60}
+              className="headline-display mt-5 text-3xl md:text-5xl"
+            />
+          </div>
+          <p className="max-w-sm text-sm leading-7 text-slate-blue-100/68">
+            Escolha pelo momento do seu volume. O modelo acompanha a operação, não trava o crescimento.
+          </p>
         </div>
 
-        <div ref={ref} className="grid md:grid-cols-2 gap-5 md:gap-6">
+        <div ref={ref} className="grid gap-4 md:grid-cols-2">
           {PLANS.map((plan) => (
             <div
               key={plan.id}
               data-card
               className={cn(
-                "relative rounded-2xl p-8 md:p-10 border transition-all duration-300 flex flex-col",
-                plan.featured
-                  ? "border-gold-400/40 bg-gradient-to-br from-gold-400/[0.06] via-navy-800 to-navy-800 shadow-[0_20px_70px_-20px_rgba(198,154,39,0.3)]"
-                  : "border-white/10 bg-navy-800/60 hover:border-white/20"
+                "surface relative flex flex-col p-7 md:p-8",
+                plan.featured && "border-gold-400/40 bg-gold-400/[0.075]"
               )}
             >
               {plan.badge && (
-                <span className="absolute -top-3 left-8 px-3 py-1.5 rounded-full btn-gold text-navy-900 text-[10px] font-bold uppercase tracking-[0.2em]">
+                <span className="mb-6 inline-flex w-fit rounded-full bg-gold-400 px-3 py-1 text-xs font-extrabold uppercase text-navy-950">
                   {plan.badge}
                 </span>
               )}
 
-              <span className="eyebrow mb-4">{plan.micro}</span>
-
-              <div className="flex items-baseline gap-1.5 mb-1">
-                <span className="font-display text-5xl md:text-6xl text-parchment-50 tracking-tight">
-                  {plan.price}
-                </span>
-                <span className="text-slate-blue-100/60 text-sm">{plan.period}</span>
+              <span className="text-sm font-bold text-gold-200">{plan.micro}</span>
+              <div className="mt-5 flex items-end gap-2">
+                <span className="font-display text-5xl font-bold text-parchment-50 md:text-6xl">{plan.price}</span>
+                <span className="pb-2 text-sm font-semibold text-slate-blue-100/66">{plan.period}</span>
               </div>
-              <p className="text-xs text-gold-400/80 mb-8">{plan.tag}</p>
+              <p className="mt-2 text-sm text-gold-200/82">{plan.tag}</p>
 
-              <ul className="space-y-3.5 flex-1">
-                {plan.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-3">
-                    <Check
-                      className="w-4 h-4 mt-0.5 text-gold-400 shrink-0"
-                      strokeWidth={2.5}
-                    />
-                    <span className="text-[15px] text-parchment-200/90 leading-relaxed">
-                      {b}
-                    </span>
+              <ul className="mt-8 flex-1 space-y-3.5">
+                {plan.bullets.map((bullet) => (
+                  <li key={bullet} className="flex items-start gap-3">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" strokeWidth={2.5} />
+                    <span className="text-sm leading-6 text-parchment-100/86">{bullet}</span>
                   </li>
                 ))}
               </ul>
@@ -102,26 +96,22 @@ export function Offer() {
               <a
                 href="#cta-final"
                 className={cn(
-                  "mt-8 flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-semibold text-sm transition-all duration-300",
+                  "mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-extrabold transition-all duration-300 hover:-translate-y-0.5",
                   plan.featured
-                    ? "btn-gold text-navy-900 hover:opacity-90"
-                    : "border border-white/15 text-parchment-100 hover:border-gold-400/40 hover:text-gold-300"
+                    ? "btn-gold text-navy-950"
+                    : "border border-white/15 text-parchment-50 hover:border-gold-400/40 hover:text-gold-100"
                 )}
               >
                 Escolher {plan.name}
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
           ))}
         </div>
 
-        <div className="mt-14 max-w-xl mx-auto text-center">
-          <p className="font-display italic text-xl md:text-2xl text-parchment-100/90 leading-snug">
-            "Se você vende pouco, não assume custo.
-            <br />
-            Se vende muito, aumenta margem."
-          </p>
-        </div>
+        <p className="mt-10 max-w-2xl text-lg leading-8 text-parchment-100/78">
+          Se vende pouco, não assume custo fixo. Se vende muito, aumenta margem com operação padronizada.
+        </p>
       </div>
     </section>
   );

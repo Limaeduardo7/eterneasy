@@ -1,30 +1,22 @@
+import { CheckCircle2 } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
-const YOU = [
-  { label: "Fecha o evento" },
-  { label: "Registra no sistema" },
-  { label: "Ativa o fluxo" },
-];
-
-const US = [
-  { label: "Organiza" },
-  { label: "Processa" },
-  { label: "Garante execução" },
-];
+const YOU = ["Fecha o evento", "Registra no sistema", "Ativa o fluxo"];
+const US = ["Organiza", "Processa", "Garante execução"];
 
 export function Role() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-col]" });
 
   return (
-    <section className="relative py-24 md:py-36 bg-navy-900">
-      <div className="section-divider absolute top-0 left-0 w-full" />
+    <section className="section-band bg-navy-900">
+      <div className="section-divider absolute left-0 top-0" />
 
       <div className="container-x">
-        <div className="max-w-2xl mb-14">
+        <div className="mb-12 max-w-2xl">
           <span className="eyebrow">Papel</span>
           <BlurText
-            text="Você não vira operador. Continua vendedor."
+            text="Você vende. A estrutura executa."
             animateBy="words"
             direction="bottom"
             delay={60}
@@ -32,44 +24,34 @@ export function Role() {
           />
         </div>
 
-        <div ref={ref} className="grid md:grid-cols-2 gap-4 md:gap-5">
-          <div
-            data-col
-            className="rounded-2xl border border-white/10 bg-navy-800/50 p-8 md:p-10"
-          >
-            <span className="eyebrow mb-8 block">Você</span>
-            <ul className="space-y-5">
+        <div ref={ref} className="grid gap-4 md:grid-cols-2">
+          <div data-col className="surface p-7 md:p-8">
+            <span className="text-sm font-extrabold uppercase text-slate-blue-100/72">Você</span>
+            <ul className="mt-7 space-y-4">
               {YOU.map((item) => (
-                <li key={item.label} className="flex items-center gap-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-parchment-300/40 shrink-0" />
-                  <span className="text-xl md:text-2xl text-parchment-50 font-light">
-                    {item.label}
-                  </span>
+                <li key={item} className="flex items-center gap-3 text-xl font-semibold text-parchment-50">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-parchment-300/70" />
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div
-            data-col
-            className="rounded-2xl border border-gold-400/20 bg-gradient-to-br from-gold-400/[0.05] via-navy-800/80 to-navy-800/80 p-8 md:p-10"
-          >
-            <span className="eyebrow mb-8 block">Eterneasy</span>
-            <ul className="space-y-5">
+          <div data-col className="surface border-gold-400/30 bg-gold-400/[0.07] p-7 md:p-8">
+            <span className="text-sm font-extrabold uppercase text-gold-200">Eterneasy</span>
+            <ul className="mt-7 space-y-4">
               {US.map((item) => (
-                <li key={item.label} className="flex items-center gap-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400/60 shrink-0" />
-                  <span className="text-xl md:text-2xl text-parchment-50 font-light">
-                    {item.label}
-                  </span>
+                <li key={item} className="flex items-center gap-3 text-xl font-semibold text-parchment-50">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-gold-300" />
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <p className="mt-12 text-center font-display italic text-2xl md:text-3xl text-parchment-100">
-          Você foca em vender. O resto roda.
+        <p className="mt-10 max-w-2xl text-lg leading-8 text-slate-blue-100/74">
+          Seu foco continua no relacionamento e na venda. O restante ganha processo, cadência e responsabilidade.
         </p>
       </div>
     </section>
