@@ -35,7 +35,7 @@ export function FinalCta() {
 
           <div data-reveal className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5554991303683"
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full btn-gold px-10 py-5 text-base font-extrabold text-navy-950 shadow-[0_20px_60px_-18px_rgba(242,215,122,0.95)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-16px_rgba(242,215,122,1)] sm:w-auto"
@@ -44,7 +44,7 @@ export function FinalCta() {
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5554991303683"
               target="_blank"
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-10 py-5 text-base font-extrabold text-navy-950 transition-all duration-300 hover:-translate-y-1 hover:bg-[#20b859] sm:w-auto"

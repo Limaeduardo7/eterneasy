@@ -117,7 +117,9 @@ export function Offer() {
               </ul>
 
               <a
-                href="#cta-final"
+                href="https://wa.me/5554991303683"
+                target="_blank"
+                rel="noreferrer"
                 className={cn(
                   "mt-8 inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-sm font-extrabold transition-all duration-300 hover:-translate-y-0.5",
                   plan.featured
@@ -125,7 +127,7 @@ export function Offer() {
                     : "border border-navy-950/12 text-navy-800 hover:border-gold-400/40 hover:text-gold-600"
                 )}
               >
-                Entender {plan.name}
+                Quero o plano {plan.name}
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>

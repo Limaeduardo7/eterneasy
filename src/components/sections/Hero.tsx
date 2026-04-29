@@ -69,7 +69,7 @@ export function Hero() {
 
             <div data-h className="mt-9 flex flex-wrap gap-3">
               <a
-                href="#cta-final"
+                href="#oferta"
                 className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_16px_48px_-16px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_56px_-14px_rgba(242,215,122,0.9)]"
               >
                 Ver a demonstração

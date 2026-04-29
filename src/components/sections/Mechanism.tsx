@@ -1,4 +1,4 @@
-﻿import { Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
+﻿import { ArrowRight, Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -97,6 +97,16 @@ export function Mechanism() {
             );
           })}
         </ol>
+
+        <div className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="#oferta"
+            className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Ver como começar
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );

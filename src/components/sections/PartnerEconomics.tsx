@@ -73,8 +73,8 @@ export function PartnerEconomics() {
                 E com o Premium, cada evento extra que você fechar entra direto na margem — sem aumentar o custo.
               </p>
             </div>
-            <a href="#cta-final" className="inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/35 px-5 py-3 text-sm font-extrabold text-gold-600 transition-colors hover:bg-gold-400/8">
-              Ver na prática
+            <a href="#oferta" className="inline-flex w-fit items-center gap-2 rounded-full border border-gold-400/35 px-5 py-3 text-sm font-extrabold text-gold-600 transition-colors hover:bg-gold-400/8">
+              Ver os planos
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>

@@ -1,4 +1,4 @@
-﻿import { BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
+﻿import { ArrowRight, BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -99,6 +99,16 @@ export function Keepsakes() {
         <p className="mt-8 text-sm leading-7 text-navy-700/60">
           Os produtos físicos são opcionais e podem ser oferecidos como upgrade por você. Cada um vira uma nova fonte de receita.
         </p>
+
+        <div className="mt-8">
+          <a
+            href="#oferta"
+            className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Quero oferecer isso nos meus eventos
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
