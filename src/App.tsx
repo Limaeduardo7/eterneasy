@@ -1,3 +1,4 @@
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Navbar } from "@/components/Navbar";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Hero } from "@/components/sections/Hero";
@@ -17,6 +18,7 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function App() {
   return (
+    <LanguageProvider>
     <div className="min-h-screen bg-navy-950 text-parchment-100">
       <Navbar />
       <main>
@@ -37,5 +39,6 @@ export default function App() {
       <FloatingWhatsApp />
       <Footer />
     </div>
+    </LanguageProvider>
   );
 }

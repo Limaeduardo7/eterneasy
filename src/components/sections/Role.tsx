@@ -1,12 +1,10 @@
-﻿import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
-
-const YOU     = ["Vende ao cliente", "Configura o evento", "Orienta no dia"];
-const ETERNAL = ["Recebe as fotos", "Exibe no slideshow", "Gera o vídeo final"];
-const CLIENT  = ["Convida os convidados", "Assiste ao monitor", "Recebe a lembrança"];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Role() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-col]" });
 
   return (
@@ -15,9 +13,9 @@ export function Role() {
 
       <div className="container-x">
         <div className="mb-12 max-w-2xl">
-          <span className="eyebrow">Quem faz o quê — e quem lucra</span>
+          <span className="eyebrow">{T.role.eyebrow}</span>
           <BlurText
-            text="Você vende. A Eterneasy opera. O cliente fica encantado."
+            text={T.role.title}
             animateBy="words"
             direction="bottom"
             delay={60}
@@ -26,13 +24,13 @@ export function Role() {
         </div>
 
         <div ref={ref} className="grid gap-4 md:grid-cols-3">
-          <RoleColumn title="Você"          items={YOU}     tone="neutral" />
-          <RoleColumn title="Eterneasy"     items={ETERNAL} tone="gold" />
-          <RoleColumn title="Cliente final" items={CLIENT}  tone="neutral" />
+          <RoleColumn title={T.role.youLabel}      items={T.role.you}     tone="neutral" />
+          <RoleColumn title={T.role.eternalLabel}  items={T.role.eternal} tone="gold" />
+          <RoleColumn title={T.role.clientLabel}   items={T.role.client}  tone="neutral" />
         </div>
 
         <p className="mt-10 text-base leading-8 text-navy-700">
-          Você fecha o contrato e orienta no dia. Tudo que envolve tecnologia, operação e entrega é com a Eterneasy.
+          {T.role.disclaimer}
         </p>
 
         <div className="mt-6">
@@ -40,7 +38,7 @@ export function Role() {
             href="#oferta"
             className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            Criar conta grátis
+            {T.role.cta}
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>
@@ -53,11 +51,7 @@ function RoleColumn({ title, items, tone }: { title: string; items: string[]; to
   return (
     <div
       data-col
-      className={
-        tone === "gold"
-          ? "surface-featured p-7"
-          : "surface p-7"
-      }
+      className={tone === "gold" ? "surface-featured p-7" : "surface p-7"}
     >
       <span className={
         tone === "gold"

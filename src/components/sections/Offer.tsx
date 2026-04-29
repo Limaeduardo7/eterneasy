@@ -1,45 +1,11 @@
-﻿import { ArrowRight, Check, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 import { cn } from "@/lib/utils";
-
-const PLANS = [
-  {
-    id: "flex",
-    name: "Flex",
-    price: "R$ 150",
-    period: "por evento",
-    tag: "Cadastro gratuito",
-    micro: "Comece hoje, sem nenhum investimento inicial",
-    featured: false,
-    cta: "Criar conta grátis",
-    bullets: [
-      "Cadastro 100% gratuito",
-      "Pague R$150 apenas quando vender",
-      "Zero mensalidade ou custo fixo",
-      "Migra para Premium quando crescer",
-    ],
-  },
-  {
-    id: "premium",
-    badge: "Mais margem em volume",
-    name: "Premium",
-    price: "R$ 500",
-    period: "/mês",
-    tag: "Eventos ilimitados",
-    micro: "Para parceiros com volume recorrente",
-    featured: true,
-    cta: "Falar sobre o Premium",
-    bullets: [
-      "Eventos ilimitados inclusos",
-      "Maior margem por evento",
-      "Operação padronizada",
-      "Suporte prioritário",
-    ],
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Offer() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
@@ -49,9 +15,9 @@ export function Offer() {
       <div className="container-x">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <span className="eyebrow">Como funciona — cadastro gratuito, receita por evento</span>
+            <span className="eyebrow">{T.offer.eyebrow}</span>
             <BlurText
-              text="Cadastre grátis. Pague só quando vender."
+              text={T.offer.title}
               animateBy="words"
               direction="bottom"
               delay={60}
@@ -59,12 +25,12 @@ export function Offer() {
             />
           </div>
           <p className="max-w-xs text-sm leading-7 text-navy-700">
-            Sem custo inicial. Sem mensalidade obrigatória. Cadastre agora e pague R$150 apenas quando fechar um evento.
+            {T.offer.subtitle}
           </p>
         </div>
 
         <div ref={ref} className="grid gap-5 md:grid-cols-2 md:items-start">
-          {PLANS.map((plan) => (
+          {T.offer.plans.map((plan) => (
             <div
               key={plan.id}
               data-card
@@ -137,7 +103,7 @@ export function Offer() {
         </div>
 
         <p className="mt-10 max-w-2xl text-base leading-8 text-navy-700/75">
-          Comece grátis no Flex — sem nenhum custo até vender o primeiro evento. Quando o volume crescer, o Premium elimina o custo por evento e aumenta a sua margem.
+          {T.offer.bottomText}
         </p>
       </div>
     </section>

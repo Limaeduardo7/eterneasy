@@ -1,29 +1,12 @@
-﻿import { ArrowRight, BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
+import { ArrowRight, BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const PRODUCTS = [
-  {
-    icon: BookOpen,
-    title: "Álbum de Lembranças",
-    desc: "Um álbum físico com as melhores fotos e mensagens do evento — impresso e encadernado para guardar para sempre.",
-    tag: "Produto físico",
-  },
-  {
-    icon: Frame,
-    title: "Quadros Personalizados",
-    desc: "Momentos especiais do evento transformados em quadros decorativos. O cliente escolhe a foto, você entrega o quadro.",
-    tag: "Produto físico",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Porta Retrato Digital",
-    desc: "Um porta retrato digital exclusivo com as melhores fotos do evento. O cliente revive cada momento quando quiser.",
-    tag: "Produto digital",
-  },
-];
+const PRODUCT_ICONS = [BookOpen, Frame, MonitorSmartphone];
 
 export function Keepsakes() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
@@ -32,16 +15,16 @@ export function Keepsakes() {
 
       <div className="container-x">
         <div className="mb-14 max-w-3xl">
-          <span className="eyebrow">Lembranças exclusivas</span>
+          <span className="eyebrow">{T.keepsakes.eyebrow}</span>
           <BlurText
-            text="O cliente não recebe só memórias. Recebe lembranças que duram."
+            text={T.keepsakes.title}
             animateBy="words"
             direction="bottom"
             delay={55}
             className="headline-display mt-5 text-3xl md:text-5xl"
           />
           <p className="mt-6 text-base leading-8 text-navy-700 md:text-lg">
-            Além do vídeo final, você pode oferecer produtos físicos e digitais que aumentam o valor percebido — e a sua margem.
+            {T.keepsakes.subtitle}
           </p>
         </div>
 
@@ -53,10 +36,14 @@ export function Keepsakes() {
                 <Video className="h-7 w-7" strokeWidth={1.6} />
               </div>
               <div className="flex-1">
-                <span className="text-xs font-bold uppercase tracking-widest text-gold-500/70">Entrega principal</span>
-                <h3 className="mt-2 font-display text-2xl font-bold text-navy-950 md:text-3xl">Vídeo do Evento</h3>
+                <span className="text-xs font-bold uppercase tracking-widest text-gold-500/70">
+                  {T.keepsakes.videoTag}
+                </span>
+                <h3 className="mt-2 font-display text-2xl font-bold text-navy-950 md:text-3xl">
+                  {T.keepsakes.videoTitle}
+                </h3>
                 <p className="mt-2 max-w-2xl text-base leading-7 text-navy-700">
-                  Transformamos todas as fotos e mensagens enviadas pelos convidados em um vídeo emocionante e personalizado. O cliente recebe uma lembrança única para reviver cada instante do evento.
+                  {T.keepsakes.videoDesc}
                 </p>
               </div>
             </div>
@@ -77,8 +64,8 @@ export function Keepsakes() {
 
         {/* Physical products grid */}
         <div ref={ref} className="grid gap-4 md:grid-cols-3">
-          {PRODUCTS.map((product) => {
-            const Icon = product.icon;
+          {T.keepsakes.products.map((product, i) => {
+            const Icon = PRODUCT_ICONS[i];
             return (
               <div key={product.title} data-card className="surface group p-6 transition-all duration-300 hover:border-gold-400/30 hover:shadow-[0_8px_32px_-8px_rgba(6,16,24,0.1)]">
                 <div className="mb-6 flex items-start justify-between gap-4">
@@ -97,7 +84,7 @@ export function Keepsakes() {
         </div>
 
         <p className="mt-8 text-sm leading-7 text-navy-700/60">
-          Os produtos físicos são opcionais e podem ser oferecidos como upgrade por você. Cada um vira uma nova fonte de receita.
+          {T.keepsakes.disclaimer}
         </p>
 
         <div className="mt-8">
@@ -105,7 +92,7 @@ export function Keepsakes() {
             href="#oferta"
             className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            Cadastrar grátis e começar
+            {T.keepsakes.cta}
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>

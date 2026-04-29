@@ -1,36 +1,12 @@
-﻿import { ArrowRight, Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
+import { ArrowRight, Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const STEPS = [
-  {
-    icon: QrCode,
-    title: "Escaneie o QR Code",
-    desc: "Convidados e familiares escaneiam o QR Code com o celular — sem app, sem cadastro.",
-  },
-  {
-    icon: MessageSquareHeart,
-    title: "Envie foto + mensagem",
-    desc: "Cada convidado posta sua foto e deixa uma mensagem especial para o homenageado.",
-  },
-  {
-    icon: MonitorPlay,
-    title: "Aparece na hora",
-    desc: "Tudo aparece em tempo real no telão, TV ou projetor durante o evento.",
-  },
-  {
-    icon: Video,
-    title: "Virou vídeo",
-    desc: "Após o evento, todas as fotos e mensagens viram um vídeo emocionante e personalizado.",
-  },
-  {
-    icon: Gift,
-    title: "Lembrança entregue",
-    desc: "O cliente recebe o vídeo + lembranças exclusivas que ficam para a vida toda.",
-  },
-];
+const STEP_ICONS = [QrCode, MessageSquareHeart, MonitorPlay, Video, Gift];
 
 export function Mechanism() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLOListElement>({ selector: "li" });
 
   return (
@@ -39,16 +15,16 @@ export function Mechanism() {
 
       <div className="container-x">
         <div className="mb-12 max-w-2xl md:mb-16">
-          <span className="eyebrow">Como funciona</span>
+          <span className="eyebrow">{T.mechanism.eyebrow}</span>
           <BlurText
-            text="Do QR Code no celular ao vídeo na mão do cliente."
+            text={T.mechanism.title}
             animateBy="words"
             direction="bottom"
             delay={60}
             className="headline-display mt-5 text-3xl md:text-5xl"
           />
           <p className="mt-6 text-base leading-8 text-navy-700">
-            Você vende. A Eterneasy cuida do QR Code, do slideshow no telão e da entrega final.
+            {T.mechanism.subtitle}
           </p>
         </div>
 
@@ -56,12 +32,14 @@ export function Mechanism() {
         <div className="mb-8 overflow-hidden rounded-3xl border border-gold-400/25 bg-gold-400/[0.04] shadow-[0_8px_40px_-16px_rgba(201,151,43,0.2)]">
           <div className="grid md:grid-cols-[0.95fr_1.05fr] md:items-stretch">
             <div className="flex flex-col justify-center p-6 md:p-8">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold-500/80">Momento de virada</span>
+              <span className="text-xs font-extrabold uppercase tracking-widest text-gold-500/80">
+                {T.mechanism.featuredTag}
+              </span>
               <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-navy-950 md:text-3xl">
-                Quando a foto aparece no telão, todo mundo entende o valor.
+                {T.mechanism.featuredTitle}
               </h3>
               <p className="mt-4 text-sm leading-7 text-navy-700">
-                A demonstração fica visual: o cliente não compra uma promessa, ele enxerga a participação acontecendo ao vivo.
+                {T.mechanism.featuredDesc}
               </p>
             </div>
 
@@ -81,11 +59,11 @@ export function Mechanism() {
         </div>
 
         <ol ref={ref} className="grid gap-3 md:grid-cols-5">
-          {STEPS.map((step, index) => {
-            const Icon = step.icon;
+          {T.mechanism.steps.map((step, index) => {
+            const Icon = STEP_ICONS[index];
             return (
               <li key={step.title} className="relative surface p-5 md:min-h-[230px] transition-all duration-300 hover:border-gold-400/30 hover:shadow-[0_8px_32px_-8px_rgba(6,16,24,0.1)]">
-                {index < STEPS.length - 1 && (
+                {index < T.mechanism.steps.length - 1 && (
                   <div className="absolute -right-1.5 top-10 z-10 hidden h-px w-3 bg-gold-400/30 md:block" />
                 )}
                 <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-gold-400/10 border border-gold-400/20 text-gold-500">
@@ -103,7 +81,7 @@ export function Mechanism() {
             href="#oferta"
             className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            Criar conta grátis
+            {T.mechanism.cta}
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>

@@ -1,35 +1,10 @@
-﻿import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
-
-const OBJECTIONS = [
-  {
-    q: "O que eu vendo exatamente?",
-    a: "Uma experiência que o cliente não esquece: convidados participam ao vivo pelo QR Code, as fotos e mensagens aparecem no telão em segundos e o cliente recebe um vídeo depois. É fácil de mostrar e fácil de comprar.",
-  },
-  {
-    q: "O cliente precisa instalar algo?",
-    a: "Nada. O convidado escaneia o QR Code, abre pelo navegador do celular, envia a foto com mensagem — e aparece no telão em segundos. O cliente não precisa fazer nada técnico.",
-  },
-  {
-    q: "Preciso ser fotógrafo?",
-    a: "Não. Você não tira nenhuma foto. Você vende o serviço, cria o evento e coloca o QR Code disponível. Os próprios convidados fazem o resto — e a Eterneasy entrega o vídeo no final.",
-  },
-  {
-    q: "Por que o cliente pagaria por isso?",
-    a: "Porque é algo que ninguém mais oferece no mercado local. O cliente vê os convidados enviando fotos no telão em tempo real, leva um vídeo com as mensagens de todos — e não tem preço pra esse tipo de lembrança.",
-  },
-  {
-    q: "E se eu vender pouco no começo?",
-    a: "Zero problema. No Flex você só paga R$150 quando vender. Pode fechar um único evento no mês e já tem margem. Não existe custo fixo para travar você nos primeiros meses.",
-  },
-  {
-    q: "Quando vale migrar para o Premium?",
-    a: "A conta é simples: se você fecha 4 ou mais eventos por mês, o Premium (R$500 fixo) já é mais barato que o Flex (4 × R$150 = R$600). E cada evento extra entra direto na margem, sem custo adicional.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Objections() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
@@ -38,9 +13,9 @@ export function Objections() {
 
       <div className="container-x">
         <div className="mb-12 max-w-3xl">
-          <span className="eyebrow">O que seus clientes vão perguntar — e como responder</span>
+          <span className="eyebrow">{T.objections.eyebrow}</span>
           <BlurText
-            text="Cada dúvida tem uma resposta que fecha a venda."
+            text={T.objections.title}
             animateBy="words"
             direction="bottom"
             delay={60}
@@ -49,7 +24,7 @@ export function Objections() {
         </div>
 
         <div ref={ref} className="grid gap-3 md:grid-cols-2">
-          {OBJECTIONS.map((item) => (
+          {T.objections.items.map((item) => (
             <div
               key={item.q}
               data-card
@@ -69,10 +44,10 @@ export function Objections() {
             href="#oferta"
             className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
           >
-            Cadastrar grátis agora
+            {T.objections.cta}
             <ArrowRight className="h-4 w-4" />
           </a>
-          <span className="text-sm text-navy-700">Sem mensalidade obrigatória · Ativação imediata</span>
+          <span className="text-sm text-navy-700">{T.objections.smallText}</span>
         </div>
       </div>
     </section>

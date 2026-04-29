@@ -1,8 +1,10 @@
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { Aurora } from "@/components/bits/Aurora";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function FinalCta() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-reveal]" });
 
   return (
@@ -20,17 +22,17 @@ export function FinalCta() {
 
           <div data-reveal className="mx-auto mb-8 flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-400/50" />
-            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">Cadastro gratuito</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">{T.finalCta.eyebrow}</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-400/50" />
           </div>
 
           <h2 data-reveal className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-parchment-50 md:text-6xl lg:text-7xl">
-            Crie sua conta grátis e{" "}
-            <span className="text-gold-300">comece a faturar.</span>
+            {T.finalCta.title1}{" "}
+            <span className="text-gold-300">{T.finalCta.title2}</span>
           </h2>
 
           <p data-reveal className="mt-7 text-base leading-8 text-slate-blue-100/70 md:text-lg md:leading-9">
-            Cadastre agora, sem custo. Ofereça dentro do fluxo que você já tem com seus clientes e pague R$150 apenas quando fechar um evento. Sem mensalidade, sem compromisso.
+            {T.finalCta.subtitle}
           </p>
 
           <div data-reveal className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -40,7 +42,7 @@ export function FinalCta() {
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full btn-gold px-10 py-5 text-base font-extrabold text-navy-950 shadow-[0_20px_60px_-18px_rgba(242,215,122,0.95)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-16px_rgba(242,215,122,1)] sm:w-auto"
             >
-              Criar conta grátis
+              {T.finalCta.cta}
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -50,12 +52,12 @@ export function FinalCta() {
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-10 py-5 text-base font-extrabold text-navy-950 transition-all duration-300 hover:-translate-y-1 hover:bg-[#20b859] sm:w-auto"
             >
               <MessageCircle className="h-4 w-4" />
-              Falar no WhatsApp
+              {T.finalCta.ctaWa}
             </a>
           </div>
 
           <p data-reveal className="mt-8 text-xs font-semibold uppercase tracking-widest text-slate-blue-100/38">
-            Cadastro gratuito · Sem mensalidade · Pague só quando vender
+            {T.finalCta.micro}
           </p>
         </div>
       </div>

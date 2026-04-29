@@ -1,36 +1,12 @@
-﻿import { ArrowRight, Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
+import { ArrowRight, Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const FLOW = [
-  {
-    icon: QrCode,
-    title: "Você cria o evento com QR Code",
-    desc: "Em minutos você configura o evento e gera o QR Code exclusivo. O convidado escaneia — sem app, sem cadastro, sem fricção.",
-  },
-  {
-    icon: MessageSquareHeart,
-    title: "Convidados enviam foto + mensagem",
-    desc: "Cada pessoa envia uma foto e escreve uma mensagem para o homenageado direto pelo celular. É simples o suficiente para qualquer convidado usar.",
-  },
-  {
-    icon: MonitorPlay,
-    title: "Tudo aparece no telão em tempo real",
-    desc: "Foto e mensagem entram no slideshow e aparecem na TV, telão ou projetor em segundos. O evento inteiro vê — e todos querem participar.",
-  },
-  {
-    icon: Video,
-    title: "As memórias viram um vídeo emocionante",
-    desc: "Depois do evento, transformamos tudo em um vídeo personalizado. O cliente recebe algo que vai guardar — e que nenhum concorrente seu entregava até hoje.",
-  },
-  {
-    icon: Gift,
-    title: "Você entrega e fecha com chave de ouro",
-    desc: "Além do vídeo, você pode oferecer álbum físico, quadros e porta retrato digital. Cada produto adicional é mais margem no mesmo evento.",
-  },
-];
+const FLOW_ICONS = [QrCode, MessageSquareHeart, MonitorPlay, Video, Gift];
 
 export function ClientPitch() {
+  const { T } = useLanguage();
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
@@ -40,16 +16,16 @@ export function ClientPitch() {
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-5">
-            <span className="eyebrow">A experiência que você passa a vender</span>
+            <span className="eyebrow">{T.clientPitch.eyebrow}</span>
             <BlurText
-              text="Participação ao vivo. Lembrança que o cliente guarda para sempre."
+              text={T.clientPitch.title}
               animateBy="words"
               direction="bottom"
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
             <p className="mt-6 text-lg leading-8 text-navy-700">
-              Não é "mais um sistema". É um serviço que o cliente vai pagar, indicar e lembrar — porque ele nunca teve isso em um evento antes.
+              {T.clientPitch.subtitle}
             </p>
 
             <div className="mt-8 overflow-hidden rounded-2xl border border-navy-950/8 bg-navy-950/[0.02] shadow-[0_4px_24px_-8px_rgba(6,16,24,0.1)]">
@@ -66,19 +42,19 @@ export function ClientPitch() {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <span className="rounded-full border border-gold-400/40 bg-gold-400/20 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-widest text-gold-200">
-                    Sem app para o convidado
+                    {T.clientPitch.imageBadge}
                   </span>
                 </div>
               </div>
               <p className="border-t border-navy-950/8 p-4 text-sm leading-6 text-navy-700">
-                A cena que você vende é simples: o convidado pega o celular, participa em segundos e vê sua memória entrar no evento.
+                {T.clientPitch.imageCaption}
               </p>
             </div>
           </div>
 
           <div ref={ref} className="grid gap-3 md:col-span-7">
-            {FLOW.map((item) => {
-              const Icon = item.icon;
+            {T.clientPitch.flow.map((item, i) => {
+              const Icon = FLOW_ICONS[i];
               return (
                 <div key={item.title} data-card className="surface grid gap-4 p-5 sm:grid-cols-[48px_1fr]">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-500">
@@ -95,7 +71,7 @@ export function ClientPitch() {
               href="#oferta"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5"
             >
-              Criar conta grátis
+              {T.clientPitch.cta}
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
