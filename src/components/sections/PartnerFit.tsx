@@ -1,4 +1,4 @@
-import { Building2, CalendarCheck, CircleAlert, HandCoins, Users } from "lucide-react";
+﻿import { Building2, CalendarCheck, CircleAlert, HandCoins, Users } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -32,7 +32,7 @@ export function PartnerFit() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-navy-700/70">
+            <p className="mt-6 text-lg leading-8 text-navy-700">
               Fotógrafos, cerimonialistas, buffets, produtores de eventos, decoradores — qualquer profissional que já tem acesso ao evento pode vender isso.
             </p>
           </div>
@@ -47,7 +47,7 @@ export function PartnerFit() {
                       <Icon className="h-5 w-5" />
                     </div>
                     <h3 className="font-display text-lg font-semibold leading-7 text-navy-950">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-navy-700/60">{item.desc}</p>
+                    <p className="mt-2 text-sm leading-6 text-navy-700">{item.desc}</p>
                   </div>
                 );
               })}
@@ -67,7 +67,7 @@ export function PartnerFit() {
 
             <div className="mt-4 flex items-center gap-3 rounded-lg border border-navy-950/8 bg-white p-5 shadow-[0_2px_16px_-4px_rgba(6,16,24,0.06)]">
               <Building2 className="h-5 w-5 shrink-0 text-gold-500" />
-              <p className="text-sm leading-6 text-navy-700/65">
+              <p className="text-sm leading-6 text-navy-700">
                 A demonstração mostra tudo: envio de fotos, slideshow no monitor e vídeo final entregue ao cliente.
               </p>
             </div>

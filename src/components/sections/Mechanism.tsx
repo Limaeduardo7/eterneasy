@@ -1,4 +1,4 @@
-import { Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
+﻿import { Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -47,7 +47,7 @@ export function Mechanism() {
             delay={60}
             className="headline-display mt-5 text-3xl md:text-5xl"
           />
-          <p className="mt-6 text-base leading-8 text-navy-700/65">
+          <p className="mt-6 text-base leading-8 text-navy-700">
             Você vende. A Eterneasy cuida do QR Code, do slideshow no telão e da entrega final.
           </p>
         </div>
@@ -60,7 +60,7 @@ export function Mechanism() {
               <h3 className="mt-3 font-display text-2xl font-bold leading-tight text-navy-950 md:text-3xl">
                 Quando a foto aparece no telão, todo mundo entende o valor.
               </h3>
-              <p className="mt-4 text-sm leading-7 text-navy-700/62">
+              <p className="mt-4 text-sm leading-7 text-navy-700">
                 A demonstração fica visual: o cliente não compra uma promessa, ele enxerga a participação acontecendo ao vivo.
               </p>
             </div>
@@ -92,7 +92,7 @@ export function Mechanism() {
                   <Icon className="h-5 w-5" strokeWidth={1.8} />
                 </div>
                 <h3 className="font-display text-base font-semibold leading-6 text-navy-950 md:text-lg">{step.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-navy-700/58">{step.desc}</p>
+                <p className="mt-2 text-sm leading-6 text-navy-700">{step.desc}</p>
               </li>
             );
           })}

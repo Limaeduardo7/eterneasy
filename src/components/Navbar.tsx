@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -66,7 +66,7 @@ export function Navbar() {
                 className={cn(
                   "rounded-full px-4 py-2 text-sm font-semibold transition-colors",
                   scrolled
-                    ? "text-navy-800/70 hover:bg-navy-950/5 hover:text-gold-500"
+                    ? "text-navy-700 hover:bg-navy-950/5 hover:text-gold-500"
                     : "text-parchment-100/75 hover:bg-white/10 hover:text-gold-200"
                 )}
               >

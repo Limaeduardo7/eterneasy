@@ -1,4 +1,4 @@
-import { ArrowUpRight, BadgePercent, BarChart3, ShieldCheck } from "lucide-react";
+﻿import { ArrowUpRight, BadgePercent, BarChart3, ShieldCheck } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -34,7 +34,7 @@ export function PartnerEconomics() {
               <div key={card.title} data-card className="surface p-6 transition-all duration-300 hover:border-gold-400/30">
                 <Icon className="mb-8 h-7 w-7 text-gold-500" strokeWidth={1.7} />
                 <h3 className="font-display text-xl font-semibold text-navy-950">{card.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-navy-700/62">{card.desc}</p>
+                <p className="mt-3 text-sm leading-7 text-navy-700">{card.desc}</p>
               </div>
             );
           })}
@@ -46,19 +46,19 @@ export function PartnerEconomics() {
             <span className="text-xs font-bold uppercase tracking-widest text-gold-500/70">Exemplo prático — plano Flex</span>
             <div className="mt-5 space-y-3">
               <div className="flex items-center justify-between gap-4 border-b border-navy-950/8 pb-3">
-                <span className="text-sm text-navy-700/60">4 eventos/mês × ticket R$500</span>
+                <span className="text-sm text-navy-700">4 eventos/mês × ticket R$500</span>
                 <span className="font-display text-lg font-bold text-navy-950">R$2.000</span>
               </div>
               <div className="flex items-center justify-between gap-4 border-b border-navy-950/8 pb-3">
-                <span className="text-sm text-navy-700/60">Custo Flex (4 × R$150)</span>
-                <span className="font-display text-lg font-bold text-navy-700/50">− R$600</span>
+                <span className="text-sm text-navy-700">Custo Flex (4 × R$150)</span>
+                <span className="font-display text-lg font-bold text-navy-700/70">− R$600</span>
               </div>
               <div className="flex items-center justify-between gap-4 pt-1">
                 <span className="text-sm font-bold text-navy-950">Margem líquida</span>
                 <span className="font-display text-2xl font-bold text-gold-500">R$1.400</span>
               </div>
             </div>
-            <p className="mt-4 text-xs leading-5 text-navy-700/40">
+            <p className="mt-4 text-xs leading-5 text-navy-700/50">
               Sem equipe extra. Sem operação manual. O ticket é o que você definir com o cliente.
             </p>
           </div>
@@ -69,7 +69,7 @@ export function PartnerEconomics() {
               <p className="mt-4 font-display text-2xl font-semibold leading-tight text-navy-950">
                 A partir de 4 eventos/mês, R$500 fixo é mais barato que pagar R$150 por cliente.
               </p>
-              <p className="mt-4 text-sm leading-7 text-navy-700/60">
+              <p className="mt-4 text-sm leading-7 text-navy-700">
                 E com o Premium, cada evento extra que você fechar entra direto na margem — sem aumentar o custo.
               </p>
             </div>

@@ -1,4 +1,4 @@
-import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
+﻿import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
 const OBJECTIONS = [
@@ -58,7 +58,7 @@ export function Objections() {
                 <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-400/60 group-hover:bg-gold-500 transition-colors" />
                 <h3 className="font-display text-lg font-semibold text-navy-950">{item.q}</h3>
               </div>
-              <p className="pl-5 text-sm leading-7 text-navy-700/62">{item.a}</p>
+              <p className="pl-5 text-sm leading-7 text-navy-700">{item.a}</p>
             </div>
           ))}
         </div>

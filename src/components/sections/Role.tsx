@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+﻿import { CheckCircle2 } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -31,7 +31,7 @@ export function Role() {
           <RoleColumn title="Cliente final" items={CLIENT}  tone="neutral" />
         </div>
 
-        <p className="mt-10 text-base leading-8 text-navy-700/58">
+        <p className="mt-10 text-base leading-8 text-navy-700">
           Você fecha o contrato e orienta no dia. Tudo que envolve tecnologia, operação e entrega é com a Eterneasy.
         </p>
       </div>
@@ -52,7 +52,7 @@ function RoleColumn({ title, items, tone }: { title: string; items: string[]; to
       <span className={
         tone === "gold"
           ? "text-xs font-extrabold uppercase tracking-widest text-gold-500"
-          : "text-xs font-extrabold uppercase tracking-widest text-navy-700/48"
+          : "text-xs font-extrabold uppercase tracking-widest text-navy-700/65"
       }>
         {title}
       </span>

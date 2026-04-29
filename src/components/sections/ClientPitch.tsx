@@ -1,4 +1,4 @@
-import { Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
+﻿import { Gift, MessageSquareHeart, MonitorPlay, QrCode, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -48,7 +48,7 @@ export function ClientPitch() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-navy-700/70">
+            <p className="mt-6 text-lg leading-8 text-navy-700">
               Não é "mais um sistema". É um serviço que o cliente vai pagar, indicar e lembrar — porque ele nunca teve isso em um evento antes.
             </p>
 
@@ -70,7 +70,7 @@ export function ClientPitch() {
                   </span>
                 </div>
               </div>
-              <p className="border-t border-navy-950/8 p-4 text-sm leading-6 text-navy-700/60">
+              <p className="border-t border-navy-950/8 p-4 text-sm leading-6 text-navy-700">
                 A cena que você vende é simples: o convidado pega o celular, participa em segundos e vê sua memória entrar no evento.
               </p>
             </div>
@@ -86,7 +86,7 @@ export function ClientPitch() {
                   </div>
                   <div>
                     <h3 className="font-display text-lg font-semibold text-navy-950">{item.title}</h3>
-                    <p className="mt-1.5 text-sm leading-6 text-navy-700/62">{item.desc}</p>
+                    <p className="mt-1.5 text-sm leading-6 text-navy-700">{item.desc}</p>
                   </div>
                 </div>
               );

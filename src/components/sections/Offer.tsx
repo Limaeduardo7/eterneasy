@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Sparkles } from "lucide-react";
+﻿import { ArrowRight, Check, Sparkles } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 import { cn } from "@/lib/utils";
@@ -56,7 +56,7 @@ export function Offer() {
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
           </div>
-          <p className="max-w-xs text-sm leading-7 text-navy-700/58">
+          <p className="max-w-xs text-sm leading-7 text-navy-700">
             Você escolhe: paga por cliente quando vender, ou trava um fixo baixo quando o volume justificar.
           </p>
         </div>
@@ -84,7 +84,7 @@ export function Offer() {
                 </span>
               )}
 
-              <span className="text-xs font-bold uppercase tracking-widest text-navy-700/45">{plan.micro}</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-navy-700/60">{plan.micro}</span>
 
               <div className="mt-4 flex items-end gap-2">
                 <span className={cn(
@@ -93,7 +93,7 @@ export function Offer() {
                 )}>
                   {plan.price}
                 </span>
-                <span className="pb-1.5 text-sm font-semibold text-navy-700/50">{plan.period}</span>
+                <span className="pb-1.5 text-sm font-semibold text-navy-700/70">{plan.period}</span>
               </div>
               <p className={cn(
                 "mt-2.5 text-base font-extrabold",
@@ -111,7 +111,7 @@ export function Offer() {
                       className={cn("mt-0.5 h-4 w-4 shrink-0", plan.featured ? "text-gold-500" : "text-gold-500/65")}
                       strokeWidth={2.5}
                     />
-                    <span className="text-sm leading-6 text-navy-800/80">{bullet}</span>
+                    <span className="text-sm leading-6 text-navy-800">{bullet}</span>
                   </li>
                 ))}
               </ul>
@@ -132,7 +132,7 @@ export function Offer() {
           ))}
         </div>
 
-        <p className="mt-10 max-w-2xl text-base leading-8 text-navy-700/52">
+        <p className="mt-10 max-w-2xl text-base leading-8 text-navy-700/75">
           Se vende pouco, o Flex evita custo fixo. Se vende muito, o Premium elimina cobrança por cliente e aumenta previsibilidade.
         </p>
       </div>

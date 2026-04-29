@@ -1,4 +1,4 @@
-import { ClipboardCheck, MonitorPlay, PlayCircle, QrCode } from "lucide-react";
+﻿import { ClipboardCheck, MonitorPlay, PlayCircle, QrCode } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -28,7 +28,7 @@ export function Implementation() {
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
           </div>
-          <p className="max-w-sm text-sm leading-7 text-navy-700/58">
+          <p className="max-w-sm text-sm leading-7 text-navy-700">
             Você passa pelo fluxo completo como se fosse um convidado — e só depois decide se quer vender.
           </p>
         </div>
@@ -45,7 +45,7 @@ export function Implementation() {
                   <Icon className="h-5 w-5" strokeWidth={1.7} />
                 </div>
                 <h3 className="font-display text-base font-semibold text-navy-950 md:text-lg">{step.title}</h3>
-                <p className="mt-2.5 text-sm leading-6 text-navy-700/58">{step.desc}</p>
+                <p className="mt-2.5 text-sm leading-6 text-navy-700">{step.desc}</p>
               </li>
             );
           })}

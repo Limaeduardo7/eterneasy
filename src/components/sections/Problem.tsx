@@ -1,4 +1,4 @@
-import { AlertTriangle, DollarSign, TrendingDown, Users } from "lucide-react";
+﻿import { AlertTriangle, DollarSign, TrendingDown, Users } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -43,7 +43,7 @@ export function Problem() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-navy-700/70">
+            <p className="mt-6 text-lg leading-8 text-navy-700">
               Quem chegar primeiro com participação ao vivo e lembranças exclusivas vai dominar esse nicho localmente.
             </p>
           </div>
@@ -57,7 +57,7 @@ export function Problem() {
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-navy-950">{item.title}</h3>
-                  <p className="mt-2.5 text-sm leading-7 text-navy-700/62">{item.desc}</p>
+                  <p className="mt-2.5 text-sm leading-7 text-navy-700">{item.desc}</p>
                 </li>
               );
             })}

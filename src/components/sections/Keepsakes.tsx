@@ -1,4 +1,4 @@
-import { BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
+﻿import { BookOpen, Frame, MonitorSmartphone, Video } from "lucide-react";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
 import { BlurText } from "@/components/bits/BlurText";
 
@@ -40,7 +40,7 @@ export function Keepsakes() {
             delay={55}
             className="headline-display mt-5 text-3xl md:text-5xl"
           />
-          <p className="mt-6 text-base leading-8 text-navy-700/65 md:text-lg">
+          <p className="mt-6 text-base leading-8 text-navy-700 md:text-lg">
             Além do vídeo final, você pode oferecer produtos físicos e digitais que aumentam o valor percebido — e a sua margem.
           </p>
         </div>
@@ -55,7 +55,7 @@ export function Keepsakes() {
               <div className="flex-1">
                 <span className="text-xs font-bold uppercase tracking-widest text-gold-500/70">Entrega principal</span>
                 <h3 className="mt-2 font-display text-2xl font-bold text-navy-950 md:text-3xl">Vídeo do Evento</h3>
-                <p className="mt-2 max-w-2xl text-base leading-7 text-navy-700/65">
+                <p className="mt-2 max-w-2xl text-base leading-7 text-navy-700">
                   Transformamos todas as fotos e mensagens enviadas pelos convidados em um vídeo emocionante e personalizado. O cliente recebe uma lembrança única para reviver cada instante do evento.
                 </p>
               </div>
@@ -85,18 +85,18 @@ export function Keepsakes() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-400/10 border border-gold-400/20 text-gold-500 group-hover:bg-gold-400/15 transition-colors">
                     <Icon className="h-5 w-5" strokeWidth={1.7} />
                   </div>
-                  <span className="rounded-full border border-navy-950/10 px-2.5 py-1 text-xs font-semibold text-navy-700/50">
+                  <span className="rounded-full border border-navy-950/10 px-2.5 py-1 text-xs font-semibold text-navy-700/70">
                     {product.tag}
                   </span>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-navy-950">{product.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-navy-700/60">{product.desc}</p>
+                <p className="mt-3 text-sm leading-7 text-navy-700">{product.desc}</p>
               </div>
             );
           })}
         </div>
 
-        <p className="mt-8 text-sm leading-7 text-navy-700/45">
+        <p className="mt-8 text-sm leading-7 text-navy-700/60">
           Os produtos físicos são opcionais e podem ser oferecidos como upgrade por você. Cada um vira uma nova fonte de receita.
         </p>
       </div>
