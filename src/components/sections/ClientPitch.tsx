@@ -65,7 +65,7 @@ export function ClientPitch() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="rounded-full border border-gold-400/30 bg-gold-400/15 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-widest text-gold-600">
+                  <span className="rounded-full border border-gold-400/40 bg-gold-400/20 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-widest text-gold-200">
                     Sem app para o convidado
                   </span>
                 </div>
