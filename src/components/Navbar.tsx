@@ -79,7 +79,7 @@ export function Navbar() {
             href="#oferta"
             className="hidden items-center gap-2 rounded-full btn-gold px-5 py-2.5 text-sm font-extrabold text-navy-950 shadow-[0_12px_34px_-18px_rgba(242,215,122,0.9)] transition-transform hover:-translate-y-0.5 md:inline-flex"
           >
-            Solicitar demonstração
+            Cadastrar grátis
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
 
@@ -136,7 +136,7 @@ export function Navbar() {
             onClick={close}
             className="mt-10 inline-flex items-center justify-center gap-2 rounded-full btn-gold px-6 py-4 text-base font-extrabold text-navy-950"
           >
-            Solicitar demonstração
+            Cadastrar grátis
             <ArrowRight className="h-4 w-4" />
           </a>
         </div>

@@ -50,21 +50,21 @@ export function Hero() {
       <div ref={ref} className="container-x relative z-10 pb-14 pt-28 md:pt-36">
         <div data-h className="mb-7 inline-flex items-center gap-2 rounded-full border border-gold-400/25 bg-gold-400/10 px-4 py-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-gold-400 animate-pulse" />
-          <span className="text-xs font-bold uppercase tracking-widest text-gold-200">Nova receita para quem já faz eventos</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-gold-200">Cadastro gratuito · Pague só quando vender</span>
         </div>
 
         <div className="grid gap-10 md:grid-cols-2 md:gap-20 md:items-center">
           <div>
             <h1 data-h className="font-display font-bold leading-[1.06] tracking-tight text-parchment-50 text-[2.75rem] md:text-5xl lg:text-[3.75rem]">
-              Seu concorrente{" "}
-              <span className="text-gold-300">ainda não</span>
+              Nova receita em{" "}
+              <span className="text-gold-300">cada evento.</span>
               <br className="hidden md:block" />
-              {" "}oferece isso.{" "}
-              <span className="text-gold-300">Você pode.</span>
+              {" "}Cadastro gratuito.{" "}
+              <span className="text-gold-300">Sem mensalidade.</span>
             </h1>
 
             <p data-h className="mt-6 max-w-md text-base leading-7 text-slate-blue-100/72 md:text-lg md:leading-8">
-              Adicione participação ao vivo e lembranças exclusivas a cada evento que você já atende — sem equipe extra, sem operação manual.
+              Cadastre grátis, ofereça dentro do fluxo comercial que você já tem com seus clientes e pague R$150 apenas quando fechar um evento. Sem custo fixo, sem risco, sem equipe extra.
             </p>
 
             <div data-h className="mt-9 flex flex-wrap gap-3">
@@ -72,7 +72,7 @@ export function Hero() {
                 href="#oferta"
                 className="inline-flex items-center gap-2 rounded-full btn-gold px-7 py-4 text-sm font-extrabold text-navy-950 shadow-[0_16px_48px_-16px_rgba(242,215,122,0.85)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_56px_-14px_rgba(242,215,122,0.9)]"
               >
-                Ver a demonstração
+                Criar conta grátis
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -84,7 +84,7 @@ export function Hero() {
             </div>
 
             <p data-h className="mt-7 text-xs font-semibold text-slate-blue-100/38 uppercase tracking-widest">
-              Sem mensalidade obrigatória · Ativação imediata
+              Cadastro gratuito · Sem mensalidade · Pague só quando vender
             </p>
           </div>
 

@@ -20,17 +20,17 @@ export function FinalCta() {
 
           <div data-reveal className="mx-auto mb-8 flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-400/50" />
-            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">Demonstração gratuita</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-gold-400/70">Cadastro gratuito</span>
             <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-400/50" />
           </div>
 
           <h2 data-reveal className="font-display text-4xl font-bold leading-[1.08] tracking-tight text-parchment-50 md:text-6xl lg:text-7xl">
-            Em 15 minutos você vê{" "}
-            <span className="text-gold-300">tudo funcionando.</span>
+            Crie sua conta grátis e{" "}
+            <span className="text-gold-300">comece a faturar.</span>
           </h2>
 
           <p data-reveal className="mt-7 text-base leading-8 text-slate-blue-100/70 md:text-lg md:leading-9">
-            Você escaneia o QR Code, envia uma foto com mensagem, vê aparecer no telão em segundos e recebe o vídeo depois. Aí você decide se vale.
+            Cadastre agora, sem custo. Ofereça dentro do fluxo que você já tem com seus clientes e pague R$150 apenas quando fechar um evento. Sem mensalidade, sem compromisso.
           </p>
 
           <div data-reveal className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -40,7 +40,7 @@ export function FinalCta() {
               rel="noreferrer"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full btn-gold px-10 py-5 text-base font-extrabold text-navy-950 shadow-[0_20px_60px_-18px_rgba(242,215,122,0.95)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-16px_rgba(242,215,122,1)] sm:w-auto"
             >
-              Quero ver a demonstração
+              Criar conta grátis
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -55,7 +55,7 @@ export function FinalCta() {
           </div>
 
           <p data-reveal className="mt-8 text-xs font-semibold uppercase tracking-widest text-slate-blue-100/38">
-            Sem custo · Sem compromisso · Você vê antes de decidir
+            Cadastro gratuito · Sem mensalidade · Pague só quando vender
           </p>
         </div>
       </div>

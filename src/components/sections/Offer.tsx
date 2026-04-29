@@ -8,15 +8,16 @@ const PLANS = [
     id: "flex",
     name: "Flex",
     price: "R$ 150",
-    period: "por cliente",
-    tag: "Sem mensalidade",
-    micro: "Para começar sem custo fixo",
+    period: "por evento",
+    tag: "Cadastro gratuito",
+    micro: "Comece hoje, sem nenhum investimento inicial",
     featured: false,
+    cta: "Criar conta grátis",
     bullets: [
-      "Pague apenas pelo que vender",
-      "Zero custo fixo obrigatório",
-      "Ativação imediata",
-      "Migra para Premium conforme cresce",
+      "Cadastro 100% gratuito",
+      "Pague R$150 apenas quando vender",
+      "Zero mensalidade ou custo fixo",
+      "Migra para Premium quando crescer",
     ],
   },
   {
@@ -25,11 +26,12 @@ const PLANS = [
     name: "Premium",
     price: "R$ 500",
     period: "/mês",
-    tag: "Clientes ilimitados",
+    tag: "Eventos ilimitados",
     micro: "Para parceiros com volume recorrente",
     featured: true,
+    cta: "Falar sobre o Premium",
     bullets: [
-      "Clientes ilimitados inclusos",
+      "Eventos ilimitados inclusos",
       "Maior margem por evento",
       "Operação padronizada",
       "Suporte prioritário",
@@ -47,9 +49,9 @@ export function Offer() {
       <div className="container-x">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
-            <span className="eyebrow">Planos — comece agora, escale no seu ritmo</span>
+            <span className="eyebrow">Como funciona — cadastro gratuito, receita por evento</span>
             <BlurText
-              text="Zero risco para validar. Custo previsível para escalar."
+              text="Cadastre grátis. Pague só quando vender."
               animateBy="words"
               direction="bottom"
               delay={60}
@@ -57,7 +59,7 @@ export function Offer() {
             />
           </div>
           <p className="max-w-xs text-sm leading-7 text-navy-700">
-            Você escolhe: paga por cliente quando vender, ou trava um fixo baixo quando o volume justificar.
+            Sem custo inicial. Sem mensalidade obrigatória. Cadastre agora e pague R$150 apenas quando fechar um evento.
           </p>
         </div>
 
@@ -127,7 +129,7 @@ export function Offer() {
                     : "border border-navy-950/12 text-navy-800 hover:border-gold-400/40 hover:text-gold-600"
                 )}
               >
-                Quero o plano {plan.name}
+                {plan.cta}
                 <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
@@ -135,7 +137,7 @@ export function Offer() {
         </div>
 
         <p className="mt-10 max-w-2xl text-base leading-8 text-navy-700/75">
-          Se vende pouco, o Flex evita custo fixo. Se vende muito, o Premium elimina cobrança por cliente e aumenta previsibilidade.
+          Comece grátis no Flex — sem nenhum custo até vender o primeiro evento. Quando o volume crescer, o Premium elimina o custo por evento e aumenta a sua margem.
         </p>
       </div>
     </section>
