@@ -12,10 +12,12 @@ const LANGS: { code: Lang; flag: string; name: string }[] = [
 
 export function Navbar() {
   const { lang, setLang, T } = useLanguage();
-  const [scrolled, setScrolled]     = useState(false);
-  const [open, setOpen]             = useState(false);
-  const [langOpen, setLangOpen]     = useState(false);
-  const langRef                     = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled]         = useState(false);
+  const [open, setOpen]                 = useState(false);
+  const [langOpen, setLangOpen]         = useState(false);
+  const [mobileLangOpen, setMobileLangOpen] = useState(false);
+  const langRef                         = useRef<HTMLDivElement>(null);
+  const mobileLangRef                   = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -29,11 +31,14 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
-  // Close lang dropdown when clicking outside
+  // Close lang dropdowns when clicking outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (langRef.current && !langRef.current.contains(e.target as Node)) {
         setLangOpen(false);
+      }
+      if (mobileLangRef.current && !mobileLangRef.current.contains(e.target as Node)) {
+        setMobileLangOpen(false);
       }
     };
     document.addEventListener("mousedown", handler);
@@ -141,19 +146,60 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Fechar menu" : "Abrir menu"}
-            className={cn(
-              "relative z-50 flex h-10 w-10 items-center justify-center rounded-full border transition-colors md:hidden",
-              scrolled
-                ? "border-navy-950/10 bg-navy-950/[0.04] text-navy-900 hover:border-gold-400/40"
-                : "border-white/10 bg-white/5 text-parchment-50 hover:border-gold-400/40"
-            )}
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          {/* Mobile: lang switcher + hamburger */}
+          <div className="flex items-center gap-2 md:hidden">
+            {/* Mobile language switcher */}
+            <div ref={mobileLangRef} className="relative z-50">
+              <button
+                onClick={() => setMobileLangOpen((v) => !v)}
+                aria-label="Mudar idioma"
+                className={cn(
+                  "flex items-center gap-1 rounded-full border px-2.5 py-2 text-xs font-bold transition-colors duration-200",
+                  scrolled
+                    ? "border-navy-950/10 bg-navy-950/[0.04] text-navy-900 hover:border-gold-400/40"
+                    : "border-white/10 bg-white/5 text-parchment-50 hover:border-gold-400/40"
+                )}
+              >
+                <span className="text-base leading-none">{currentLang.flag}</span>
+                <span className="text-[0.65rem] font-extrabold uppercase">{lang}</span>
+                <ChevronDown
+                  className={cn("h-3 w-3 transition-transform duration-200", mobileLangOpen && "rotate-180")}
+                />
+              </button>
+
+              {mobileLangOpen && (
+                <div className="absolute right-0 top-full mt-2 min-w-[130px] rounded-xl border border-navy-950/8 bg-white p-1 shadow-[0_8px_32px_-8px_rgba(6,16,24,0.22)]">
+                  {LANGS.map((l) => (
+                    <button
+                      key={l.code}
+                      onClick={() => { setLang(l.code); setMobileLangOpen(false); }}
+                      className={cn(
+                        "flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold transition-colors hover:bg-navy-950/[0.04]",
+                        lang === l.code ? "text-gold-500" : "text-navy-700"
+                      )}
+                    >
+                      <span className="text-base">{l.flag}</span>
+                      <span>{l.name}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Hamburger */}
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label={open ? "Fechar menu" : "Abrir menu"}
+              className={cn(
+                "relative z-50 flex h-10 w-10 items-center justify-center rounded-full border transition-colors",
+                scrolled
+                  ? "border-navy-950/10 bg-navy-950/[0.04] text-navy-900 hover:border-gold-400/40"
+                  : "border-white/10 bg-white/5 text-parchment-50 hover:border-gold-400/40"
+              )}
+            >
+              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </header>
 
