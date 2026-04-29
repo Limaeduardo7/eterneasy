@@ -18,7 +18,7 @@ export function PartnerFit() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
-    <section className="section-band bg-navy-950">
+    <section className="section-band bg-parchment-50">
       <div className="section-divider absolute left-0 top-0" />
 
       <div className="container-x">
@@ -32,7 +32,7 @@ export function PartnerFit() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
+            <p className="mt-6 text-lg leading-8 text-navy-700/70">
               Fotógrafos, cerimonialistas, buffets, produtores de eventos, decoradores — qualquer profissional que já tem acesso ao evento pode vender isso.
             </p>
           </div>
@@ -42,32 +42,32 @@ export function PartnerFit() {
               {IDEAL.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} data-card className="surface p-5">
-                    <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 text-gold-200">
+                  <div key={item.title} data-card className="surface p-5 transition-all duration-300 hover:border-gold-400/30">
+                    <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-500">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="font-display text-lg font-semibold leading-7 text-parchment-50">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-blue-100/64">{item.desc}</p>
+                    <h3 className="font-display text-lg font-semibold leading-7 text-navy-950">{item.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-navy-700/60">{item.desc}</p>
                   </div>
                 );
               })}
             </div>
 
-            <div className="mt-4 rounded-lg border border-ember-400/20 bg-ember-400/[0.055] p-6">
-              <div className="mb-4 flex items-center gap-3 text-sm font-extrabold uppercase text-ember-400">
+            <div className="mt-4 rounded-lg border border-amber-400/25 bg-amber-50 p-6">
+              <div className="mb-4 flex items-center gap-3 text-sm font-extrabold uppercase text-amber-600">
                 <CircleAlert className="h-4 w-4" />
                 Não é para você se
               </div>
               <div className="grid gap-3 md:grid-cols-3">
                 {NOT_IDEAL.map((item) => (
-                  <p key={item} className="text-sm leading-6 text-parchment-100/72">{item}</p>
+                  <p key={item} className="text-sm leading-6 text-navy-800/65">{item}</p>
                 ))}
               </div>
             </div>
 
-            <div className="mt-4 flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] p-5">
-              <Building2 className="h-5 w-5 shrink-0 text-gold-300" />
-              <p className="text-sm leading-6 text-slate-blue-100/72">
+            <div className="mt-4 flex items-center gap-3 rounded-lg border border-navy-950/8 bg-white p-5 shadow-[0_2px_16px_-4px_rgba(6,16,24,0.06)]">
+              <Building2 className="h-5 w-5 shrink-0 text-gold-500" />
+              <p className="text-sm leading-6 text-navy-700/65">
                 A demonstração mostra tudo: envio de fotos, slideshow no monitor e vídeo final entregue ao cliente.
               </p>
             </div>

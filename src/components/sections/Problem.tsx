@@ -29,7 +29,7 @@ export function Problem() {
   const ref = useRevealOnScroll<HTMLUListElement>({ selector: "li" });
 
   return (
-    <section id="problema" className="section-band bg-navy-900">
+    <section id="problema" className="section-band bg-parchment-50">
       <div className="section-divider absolute left-0 top-0" />
 
       <div className="container-x">
@@ -43,7 +43,7 @@ export function Problem() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
+            <p className="mt-6 text-lg leading-8 text-navy-700/70">
               Quem chegar primeiro com participação ao vivo e lembranças exclusivas vai dominar esse nicho localmente.
             </p>
           </div>
@@ -52,12 +52,12 @@ export function Problem() {
             {ITEMS.map((item) => {
               const Icon = item.icon;
               return (
-                <li key={item.title} className="surface group p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/30">
-                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 text-gold-200">
+                <li key={item.title} className="surface group p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-400/30 hover:shadow-[0_8px_32px_-8px_rgba(6,16,24,0.12)]">
+                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-lg bg-gold-400/10 text-gold-500">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-parchment-50">{item.title}</h3>
-                  <p className="mt-2.5 text-sm leading-7 text-slate-blue-100/66">{item.desc}</p>
+                  <h3 className="font-display text-xl font-semibold text-navy-950">{item.title}</h3>
+                  <p className="mt-2.5 text-sm leading-7 text-navy-700/62">{item.desc}</p>
                 </li>
               );
             })}

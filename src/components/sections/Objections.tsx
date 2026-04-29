@@ -32,10 +32,8 @@ export function Objections() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
-    <section id="objecoes" className="section-band bg-navy-900">
+    <section id="objecoes" className="section-band bg-white">
       <div className="section-divider absolute left-0 top-0" />
-
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_50%_60%_at_100%_50%,rgba(201,151,43,0.06)_0%,transparent_70%)]" />
 
       <div className="container-x">
         <div className="mb-12 max-w-3xl">
@@ -51,12 +49,16 @@ export function Objections() {
 
         <div ref={ref} className="grid gap-3 md:grid-cols-2">
           {OBJECTIONS.map((item) => (
-            <div key={item.q} data-card className="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition-all duration-300 hover:border-gold-400/20 hover:bg-white/[0.07]">
+            <div
+              key={item.q}
+              data-card
+              className="group rounded-xl border border-navy-950/8 bg-white p-6 shadow-[0_2px_16px_-4px_rgba(6,16,24,0.06)] transition-all duration-300 hover:border-gold-400/30 hover:shadow-[0_8px_32px_-8px_rgba(6,16,24,0.1)]"
+            >
               <div className="mb-4 flex items-start gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-400/70 group-hover:bg-gold-300 transition-colors" />
-                <h3 className="font-display text-lg font-semibold text-parchment-50">{item.q}</h3>
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-gold-400/60 group-hover:bg-gold-500 transition-colors" />
+                <h3 className="font-display text-lg font-semibold text-navy-950">{item.q}</h3>
               </div>
-              <p className="pl-5 text-sm leading-7 text-slate-blue-100/65">{item.a}</p>
+              <p className="pl-5 text-sm leading-7 text-navy-700/62">{item.a}</p>
             </div>
           ))}
         </div>

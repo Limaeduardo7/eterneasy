@@ -10,11 +10,8 @@ export function Role() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-col]" });
 
   return (
-    <section className="section-band bg-navy-900">
+    <section className="section-band bg-white">
       <div className="section-divider absolute left-0 top-0" />
-
-      {/* Center radial glow */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,rgba(201,151,43,0.07)_0%,transparent_70%)]" />
 
       <div className="container-x">
         <div className="mb-12 max-w-2xl">
@@ -34,7 +31,7 @@ export function Role() {
           <RoleColumn title="Cliente final" items={CLIENT}  tone="neutral" />
         </div>
 
-        <p className="mt-10 text-base leading-8 text-slate-blue-100/62">
+        <p className="mt-10 text-base leading-8 text-navy-700/58">
           Você fecha o contrato e orienta no dia. Tudo que envolve tecnologia, operação e entrega é com a Eterneasy.
         </p>
       </div>
@@ -54,18 +51,18 @@ function RoleColumn({ title, items, tone }: { title: string; items: string[]; to
     >
       <span className={
         tone === "gold"
-          ? "text-xs font-extrabold uppercase tracking-widest text-gold-300"
-          : "text-xs font-extrabold uppercase tracking-widest text-slate-blue-100/55"
+          ? "text-xs font-extrabold uppercase tracking-widest text-gold-500"
+          : "text-xs font-extrabold uppercase tracking-widest text-navy-700/48"
       }>
         {title}
       </span>
       <ul className="mt-7 space-y-4">
         {items.map((item) => (
-          <li key={item} className="flex items-center gap-3 text-base font-semibold text-parchment-50 md:text-lg">
+          <li key={item} className="flex items-center gap-3 text-base font-semibold text-navy-950 md:text-lg">
             <CheckCircle2 className={
               tone === "gold"
-                ? "h-5 w-5 shrink-0 text-gold-300"
-                : "h-5 w-5 shrink-0 text-parchment-300/55"
+                ? "h-5 w-5 shrink-0 text-gold-500"
+                : "h-5 w-5 shrink-0 text-navy-700/35"
             } />
             {item}
           </li>

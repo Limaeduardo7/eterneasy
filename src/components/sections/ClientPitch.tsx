@@ -34,7 +34,7 @@ export function ClientPitch() {
   const ref = useRevealOnScroll<HTMLDivElement>({ selector: "[data-card]" });
 
   return (
-    <section id="o-que-e" className="section-band bg-navy-900">
+    <section id="o-que-e" className="section-band bg-white">
       <div className="section-divider absolute left-0 top-0" />
 
       <div className="container-x">
@@ -48,9 +48,32 @@ export function ClientPitch() {
               delay={60}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-lg leading-8 text-slate-blue-100/72">
+            <p className="mt-6 text-lg leading-8 text-navy-700/70">
               Não é "mais um sistema". É um serviço que o cliente vai pagar, indicar e lembrar — porque ele nunca teve isso em um evento antes.
             </p>
+
+            <div className="mt-8 overflow-hidden rounded-2xl border border-navy-950/8 bg-navy-950/[0.02] shadow-[0_4px_24px_-8px_rgba(6,16,24,0.1)]">
+              <div className="relative">
+                <img
+                  src="/event-participation-ai.webp"
+                  alt="Convidados usando o celular para participar de uma experiência interativa em um evento"
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-64 w-full object-cover opacity-90 saturate-[0.92]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="rounded-full border border-gold-400/30 bg-gold-400/15 px-3 py-1 text-[0.68rem] font-extrabold uppercase tracking-widest text-gold-600">
+                    Sem app para o convidado
+                  </span>
+                </div>
+              </div>
+              <p className="border-t border-navy-950/8 p-4 text-sm leading-6 text-navy-700/60">
+                A cena que você vende é simples: o convidado pega o celular, participa em segundos e vê sua memória entrar no evento.
+              </p>
+            </div>
           </div>
 
           <div ref={ref} className="grid gap-3 md:col-span-7">
@@ -58,12 +81,12 @@ export function ClientPitch() {
               const Icon = item.icon;
               return (
                 <div key={item.title} data-card className="surface grid gap-4 p-5 sm:grid-cols-[48px_1fr]">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold-400/10 border border-gold-400/15 text-gold-200">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-500">
                     <Icon className="h-5 w-5" strokeWidth={1.7} />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg font-semibold text-parchment-50">{item.title}</h3>
-                    <p className="mt-1.5 text-sm leading-6 text-slate-blue-100/65">{item.desc}</p>
+                    <h3 className="font-display text-lg font-semibold text-navy-950">{item.title}</h3>
+                    <p className="mt-1.5 text-sm leading-6 text-navy-700/62">{item.desc}</p>
                   </div>
                 </div>
               );

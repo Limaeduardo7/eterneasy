@@ -28,10 +28,8 @@ export function Proof() {
   const ref = useRevealOnScroll<HTMLOListElement>({ selector: "li" });
 
   return (
-    <section className="section-band bg-navy-950">
+    <section className="section-band bg-parchment-50">
       <div className="section-divider absolute left-0 top-0" />
-
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_50%_60%_at_0%_50%,rgba(201,151,43,0.06)_0%,transparent_70%)]" />
 
       <div className="container-x">
         <div className="grid gap-12 md:grid-cols-12 md:gap-20">
@@ -44,7 +42,7 @@ export function Proof() {
               delay={70}
               className="headline-display mt-5 text-3xl md:text-5xl"
             />
-            <p className="mt-6 text-base leading-8 text-slate-blue-100/65">
+            <p className="mt-6 text-base leading-8 text-navy-700/62">
               Não é teoria. É o que acontece nos primeiros eventos de quem começa com a Eterneasy.
             </p>
           </div>
@@ -53,11 +51,11 @@ export function Proof() {
             {POINTS.map((point, index) => (
               <li
                 key={point.title}
-                className={`relative py-8 pl-6 ${index !== 0 ? "border-t border-white/8" : ""}`}
+                className={`relative py-8 pl-6 ${index !== 0 ? "border-t border-navy-950/8" : ""}`}
               >
-                <div className="absolute left-0 top-8 h-8 w-[3px] rounded-full bg-gradient-to-b from-gold-400/70 to-gold-400/10" />
-                <h3 className="font-display text-xl font-semibold text-parchment-50 md:text-2xl">{point.title}</h3>
-                <p className="mt-2 text-base leading-7 text-slate-blue-100/62">{point.desc}</p>
+                <div className="absolute left-0 top-8 h-8 w-[3px] rounded-full bg-gradient-to-b from-gold-400 to-gold-400/15" />
+                <h3 className="font-display text-xl font-semibold text-navy-950 md:text-2xl">{point.title}</h3>
+                <p className="mt-2 text-base leading-7 text-navy-700/60">{point.desc}</p>
               </li>
             ))}
           </ol>
